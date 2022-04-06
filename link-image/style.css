@@ -1,0 +1,40 @@
+li a >img{
+    width: 75%;
+}
+
+.row{
+    display: flex;
+}
+
+.row li{
+    list-style-type: none;
+    text-align: center;
+    font-size: 17px;
+}
+
+a{
+    text-decoration: none;
+}
+
+a .title{
+    margin-top: 15px;
+}
+
+.detail-product{
+    display: flex;
+}
+
+.center {
+    display: block;
+    margin-right: 30px;
+    max-width: 500px;
+}
+
+.center > img {
+    width: 100%;
+}
+
+.product-info li{
+    font-size: 17px;
+    margin: 10px;
+}
