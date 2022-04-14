@@ -38,6 +38,7 @@ body {
 img {
     width: 100%;
     border-radius: 5px;
+    
 }
 
 .box {
@@ -103,3 +104,4 @@ li {
     list-style: none;
     margin: 15px;
 }
+
