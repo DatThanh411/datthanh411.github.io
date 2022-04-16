@@ -7,19 +7,16 @@ body {
     background-color: #0e0e1e;
 }
 
-.container {
-    background-color: #171e22;
-}
-
 .content {
-    max-width: 1350px;
+    max-width: 90%;
     margin: auto;
+    background-color: #171e22;
 }
 
 .products {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     width: 100%;
 }
 
@@ -60,21 +57,21 @@ img:hover {
     border-bottom: 5px solid rgb(31, 2, 249);
 }
 
-h3 {
+h2 {
     color: #fff;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: bold;
-    width: 11%;
     font-size: 25px;
+    margin: 20px;
 }
 
-.info h4, p {
+.info h3, p {
     margin: 0px;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
 }
 
-.info h4 {
+.info h3 {
     color: #fff;
     font-weight: bold;
     line-height: 1.5;
@@ -109,7 +106,7 @@ h3 {
     border-bottom: 7px solid rgb(255, 132, 0);
 }
 
-.info h4:hover {
+.info h3:hover {
     color: #dd163b;
 }
 
