@@ -43,6 +43,7 @@ h1, .title a, .info h2, .info p, .back, .more{
     height: 280px;
     object-fit: cover;
     border-radius: 10px;
+    transition: 0.3s;
 }
 
 .products img:hover {
