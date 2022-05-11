@@ -89,6 +89,95 @@
                         );
                     }
                 }
+
+            // Bài tập function buổi 4
+                // Bài 1
+                function timSoLonNhat(a,b) {
+                    if (typeof a == "number" && typeof b == "number") {
+                        if (a > b) {
+                            return a;
+                        } 
+                        else {
+                            if (a == b) {
+                                return "Hai so bang nhau";
+                            } 
+                            else {
+                                return b;
+                            }
+                        }
+                    } 
+                    else {
+                        console.log("Tham so truyen vao khong hop le");
+                    }
+                }
+
+                // Bài 2
+                function tinhGiaiThua(x) {
+                    if (x >= 0) {
+                        let giai_thua = 1;
+                        for(let i = 1 ; i <= x; i++) {
+                            giai_thua = giai_thua*i;
+                        }
+                        return giai_thua;
+                    } 
+                    else {
+                        return "Tham so truyen vao khong hop le"; 
+                    }
+                }
+
+                // Bài 3
+                function diem(x) {
+                    if (x >= 0 && x <= 10) {
+                        if (x >= 8.5 && x <= 10) {
+                            return "Điểm A";
+                        }
+                        else {
+                            if ( x >= 7 && x <= 8.5) {
+                                return "Điểm B";
+                            }
+                            else {
+                                if (x >= 5.5 && x <= 7) {
+                                    return "Điểm C";
+                                } 
+                                else {
+                                    if ( x >= 4 && x <= 5.5) {
+                                        return "Điểm D";
+                                    }
+                                    return "Điểm F"
+                                }
+                            }
+                        }    
+                    } 
+                    else {
+                        return "Tham so truyen vao khong hop le";
+                    }
+                }
+
+                // Bài 4
+                function translate(x) {
+                    let xin_chao = "Hello";
+                    switch (x) {
+                        case "de":
+                            return xin_chao = "Hallo";        
+                            break;
+                        case "fr":
+                            return xin_chao = "Bonjour";
+                            break;
+                        case "jp":
+                            return xin_chao = "こんにちは";
+                            break;
+                        case "ru":
+                            return xin_chao = "Привет";
+                            break;
+                        case "kr":
+                            return xin_chao = "여보세요";
+                            break;  
+                        default:
+                            return xin_chao = "Xin chào";
+                            break;
+                    }
+                }
+                    
     </script>
 </body>
 </html>
