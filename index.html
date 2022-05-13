@@ -67,7 +67,7 @@
                     for(let i = 1 ; i <= x; i++) {
                         giai_thua = giai_thua*i;
                     }
-                    document.write(giai_thua);
+                   return giai_thua;
                 }
 
             // Bài 3
@@ -98,12 +98,7 @@
                             return a;
                         } 
                         else {
-                            if (a == b) {
-                                return "Hai so bang nhau";
-                            } 
-                            else {
-                                return b;
-                            }
+                            return b;
                         }
                     } 
                     else {
@@ -113,11 +108,8 @@
 
                 // Bài 2
                 function tinhGiaiThua(x) {
-                    if (x >= 0) {
-                        let giai_thua = 1;
-                        for(let i = 1 ; i <= x; i++) {
-                            giai_thua = giai_thua*i;
-                        }
+                    if (x >= 0 && Number.isInteger(x)) {
+                        let giai_thua = giaiThua(x);
                         return giai_thua;
                     } 
                     else {
@@ -127,57 +119,128 @@
 
                 // Bài 3
                 function diem(x) {
-                    if (x >= 0 && x <= 10) {
-                        if (x >= 8.5 && x <= 10) {
-                            return "Điểm A";
-                        }
-                        else {
-                            if ( x >= 7 && x <= 8.5) {
-                                return "Điểm B";
-                            }
-                            else {
-                                if (x >= 5.5 && x <= 7) {
-                                    return "Điểm C";
-                                } 
-                                else {
-                                    if ( x >= 4 && x <= 5.5) {
-                                        return "Điểm D";
-                                    }
-                                    return "Điểm F"
-                                }
-                            }
-                        }    
+                    if (x >= 8.5) {
+                        return "Điểm A";
+                    }
+                    else if (x >= 7) {
+                        return "Điểm B";
+                    } 
+                    else if (x >= 5.5) {
+                        return "Điểm C";
+                    } 
+                    else if (x >= 4) {
+                        return "Điểm D";
                     } 
                     else {
-                        return "Tham so truyen vao khong hop le";
-                    }
+                        return "Điểm F";
+                    } 
                 }
-
                 // Bài 4
                 function translate(x) {
                     let xin_chao = "Hello";
-                    switch (x) {
-                        case "de":
-                            return xin_chao = "Hallo";        
-                            break;
-                        case "fr":
-                            return xin_chao = "Bonjour";
-                            break;
-                        case "jp":
-                            return xin_chao = "こんにちは";
-                            break;
-                        case "ru":
-                            return xin_chao = "Привет";
-                            break;
-                        case "kr":
-                            return xin_chao = "여보세요";
-                            break;  
-                        default:
-                            return xin_chao = "Xin chào";
-                            break;
+                        if(x == "de"){
+                            return "Hallo";
+                        }
+                        if(x == "fr"){
+                            return "Bonjour";
+                        }
+                        if(x == "jp"){
+                            return "こんにちは";
+                        }
+                        if(x == "ru"){
+                            return "Привет";
+                        }
+                        if(x == "kr"){
+                            return "여보세요";
+                        }
+                        return "Xin chào";
+                }
+                
+                // Bài Thực hành trên lớp
+                function inSo(x){
+                    for (let i = 1; i <= 100; i++ ){
+                        if(i % 5 == 0 && i % 3 == 0){
+                            document.write('<p style = "color: blue">' + i + '</p>');
+                        }
+                        else if(i % 3 == 0){
+                            document.write('<p style = "color: orange">' + i + '</p>');
+                        }
+                        else if(i % 5 == 0){
+                            document.write('<p style = "color: red">' + i + '</p>');
+                        }
+                        else {
+                            document.write('<p style = "color: black">' + i + '</p>');
+                        }
                     }
                 }
-                    
+
+                function timSoNhoNhat(a, b, c){
+                    if (a < b && a < c) {
+                            return a;
+                        } 
+                        else if (b < a && b < c ) {
+                            return b;
+                        }
+                        else {
+                            return c;
+                        }
+                    } 
+
+            // Bài tập function buổi 5
+                // Bài 1
+                function ngayThang() {
+                    let now = new Date();
+                    let date = now.getDate();
+                    let month = now.getMonth() + 1;
+                    let year = now.getFullYear();
+
+                    let all = `${date}` + `-${month}` + `-${year}`;
+
+                    let mua = "";
+                    if(month == 1 || month == 2 || month == 3 ) {
+                        mua = "Mùa Xuân";
+                    }
+                    else if(month == 4 || month == 5 || month == 6) {
+                        mua = "Mùa Hè";
+                    }
+                    else if(month == 7 || month == 8 || month == 9) {
+                        mua = "Mùa Thu";
+                    }
+                    else {
+                        mua = "Mùa Đông";
+                    }
+
+                    document.write("<h1>" + all + " - " + mua + "</h1>");
+                }
+
+                // Bài 2
+                function sapXep(x) {
+                    x.sort();
+                    let order = 0;
+                    for(let i = 0; i < x.length; i++) {
+                        order++;
+                        document.write("<h1>" + order + "." + x[i] + "</h1>");
+                    }
+                }
+
+                // Bài 3
+                function soChan(x) {
+                    let newNum = [];
+                    for(let i = 0; i < x.length; i++) {
+                        if(x[i] % 2 === 0) {
+                            newNum.push(x[i]);
+                        }
+                    }
+                    return newNum;
+                }
+
+                // Bài 4
+                function soNhoNhat(x) {
+                    let min = x;
+                    min.sort(function(a,b){return a - b});
+
+                    return min[0];
+                }
     </script>
 </body>
 </html>
