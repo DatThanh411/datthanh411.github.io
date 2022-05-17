@@ -244,15 +244,11 @@
 
             // Bài tập mảng + object buổi 6
                 // Bài 1
-                function kiemTra(name, pass, confirm) {
-                    let info = {
-                        username: name,
-                        password: pass,
-                        repass: confirm
-                    }
-                    if(name != "" && name.length <= 20 ) {
-                        if(pass.length >= 6 && pass.length <= 32 ) {
-                            if(confirm == pass) {
+                function kiemTra(x) {
+                
+                    if(x["name"] != "" && x["name"].length <= 20 ) {
+                        if(x["pass"].length >= 6 && x["pass"].length <= 32 ) {
+                            if(x["confirm"] == x["pass"]) {
                                 return "Pass";
                             }
                             else {
@@ -287,8 +283,8 @@
                     let Avgage = 0;
                     for(let i = 0; i < infoStd.length; i++) {
                         Avgage += infoStd[i]['age'];
-                        avg = (Avgage/infoStd.length);
                     }
+                    avg = (Avgage/infoStd.length);
                     return Math.floor(avg);
                 }
                 
