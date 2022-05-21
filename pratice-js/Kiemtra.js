@@ -14,11 +14,11 @@ function secondNumber(number) {
     number.sort(function(a,b) {return b - a});
     for(let i = 0; i < number.length; i++) {
         if(number[i] < number[0]) {
-            newNum.push(x[i]);
+            newNum.push(number[i]);
             break;
         }
     }
-    return num;
+    return newNum;
 }
 
 // Bài 3
