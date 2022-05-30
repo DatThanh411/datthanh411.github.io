@@ -565,3 +565,179 @@ section {
 .episode-done {
   padding: 14px 9px;
 }
+
+.video, .total {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-video {
+  width: 70%;
+  margin-bottom: -4px;
+}
+
+.player-video {
+  max-width: 100%;
+}
+
+.episode-video {
+  width: 29%;
+  border: 1px solid #ccc;
+}
+
+.episode-video-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+  border-bottom: 1px solid #ccc;
+  margin: 10px;
+  height: 30px;
+}
+
+.episode-tab {
+  border-bottom: 2px solid red;
+}
+
+.total-chapter input[type="number"] {
+  width: 70px;
+  text-align: center;
+  background-color: #eee;
+  border: 0;
+}
+
+.total {
+  padding: 0px 10px;
+  font-size: 14px;
+  border-bottom: 1px solid #ccc;
+  height: 30px;
+}
+
+.video-chapter {
+  padding: 10px;
+  overflow-x: auto;
+  height: 410px;
+}
+
+.item-video {
+  width: 50%;
+  margin-right: 10px;
+  overflow: hidden;
+}
+
+.item-video img {
+  transition: 0.3s;
+  display: block;
+}
+
+.item-video:hover img {
+  transform: scale(1.2);
+}
+
+.item-video:active {
+  border: 2px dashed #d80f16;
+}
+
+.item-1 {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.video-item-info  {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.video-item-info a {
+  text-decoration: none;
+  color: #333;
+}
+
+.video-item-info:hover a {
+  color: #d80f16;
+}
+
+.video-item-title {
+  font-size: 14px;
+}
+
+.video-item-views {
+  font-size: 13px;
+}
+
+.video-content {
+  width: 900px;
+  margin-top: 40px;
+}
+
+.video-content-name {
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 0;
+  color: #333;
+}
+
+.video-content-views {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.video-content-react {
+  margin-top: 20px;
+  height: 30px;
+}
+
+.video-like {
+  float: left;
+  margin-right: 10px;
+  background: #e5525e;
+}
+
+.video-follow {
+  float: left;
+  background: #0e6f6a;
+}
+
+.video-share {
+  float: right;
+  background: #4267b2;
+}
+
+.video-like, .video-follow, .video-share {
+  padding: 4px 8px;
+  border-radius: 5px;
+  color: white;
+  font-size: 13px;
+  line-height: 20px;
+}
+
+.count-box {
+  padding: 0px 5px;
+  border-radius: 5px;
+  background: white;
+  opacity: 0.99;
+  color: black;
+}
+
+.video-content-info {
+  margin-top: 6px;
+}
+
+.video-content-description {
+  margin-top: 15px;
+}
+
+.video-info-tag {
+  margin: 10px 0px;
+  margin-right: 10px;
+}
+
+.video-info-tag span {
+  margin-right: 5px;
+}
+
+.font {
+  font-size: 15px;
+  line-height: 1.6;
+  color: black;
+}
