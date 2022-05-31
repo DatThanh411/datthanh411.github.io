@@ -128,6 +128,13 @@ section {
   box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.5);
   margin-bottom: 15px;
   height: 75px;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background: white;
+  position: fixed;
+  z-index: 10000;
 }
 
 .menu {
@@ -569,6 +576,10 @@ section {
 .video, .total {
   display: flex;
   justify-content: space-between;
+}
+
+.video {
+  padding-top: 95px;
 }
 
 .main-video {
