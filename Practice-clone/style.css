@@ -603,6 +603,7 @@ section {
   text-align: center;
   background-color: #eee;
   border: 0;
+  padding-right: 20px;
 }
 
 .total {
@@ -610,6 +611,16 @@ section {
   font-size: 14px;
   border-bottom: 1px solid #ccc;
   height: 30px;
+}
+
+.total-chapter {
+  position: relative;
+}
+
+.total-chapter i {
+  position: absolute;
+  right: 5px;
+  color: #333;
 }
 
 .video-chapter {
@@ -646,6 +657,7 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  width: 70%;
 }
 
 .video-item-info a {
