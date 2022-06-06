@@ -1,0 +1,794 @@
+tr, td, th {
+    padding: 10px;
+}
+
+table, td, td, th {
+    border: 1px solid grey;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  
+  img {
+    max-width: 100%;
+  }
+  
+  .container {
+    width: 1300px;
+    margin: 0 auto;
+  
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  
+  .row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  
+    margin-top: -7px;
+    margin-left: -5px;
+    margin-right: -5px;
+  }
+  
+  [class*='col-'] {
+    margin-top: 10px;
+  
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  
+  .col-1 {
+    width: 8.333333%;
+  }
+  
+  .col-2 {
+    width: 16.666667%;
+  }
+  
+  .col-3 {
+    width: 25%;
+  }
+  
+  .col-4 {
+    width: 33.333333%;
+  }
+  
+  .col-5 {
+    width: 41.666667%;
+  }
+  
+  .col-6 {
+    width: 50%;
+  }
+  
+  .col-7 {
+    width: 58.333333%;
+  }
+  
+  .col-8 {
+    width: 66.666667%;
+  }
+  
+  .col-9 {
+    width: 75%;
+  }
+  
+  .col-10 {
+    width: 83.333333%;
+  }
+  
+  .col-11 {
+    width: 91.666667%;
+  }
+  
+  .col-12 {
+    width: 100%;
+  }
+  
+  section {
+    margin-bottom: 60px;
+  }
+  
+  .section-header {
+    margin-bottom: 10px;
+    font-size: 24px;
+    font-weight: 450;
+    color: #333;
+  }
+  
+  .section-header i {
+    margin-left: 15px;
+    font-size: 18px;
+  }
+  
+  .section-header a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .picked {
+    height: 180px;
+    overflow: hidden;
+  }
+  
+  .more {
+    text-align: center;
+    background-color: #d80f16;
+    width: 100px;
+    margin: auto;
+    padding: 6px 12px;
+    margin-top: 10px;
+    
+  }
+  
+  .more a{
+    color: white;
+    text-decoration: none;
+  }
+  
+  .header {
+    box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.5);
+    margin-bottom: 15px;
+    height: 75px;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background: white;
+    position: fixed;
+    z-index: 10000;
+  }
+  
+  .menu {
+    padding: 10px 0px;
+  }
+  
+  .menu-item {
+    padding: 3px 15px;
+    float: left;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    text-align: center;
+    margin: 5px;
+  }
+  
+  .menu-item a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .menu-item:hover {
+    border-bottom: none;
+    height: 50px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  
+  .menu-item:hover .sub-menu {
+    display: block;
+  }
+  
+  .sub-menu {
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 74px;
+    background-color: #fff;
+    box-shadow: 0 4px 5px #ccc;
+    border-top: 1px solid #fff;
+    display: none;
+    z-index: 2;
+  }
+  
+  .sub-menu-genre {
+    margin-left: 2px;
+  }
+  
+  .genre-item {
+    float: left;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 14px;
+    padding: 0px 5px;
+    margin-left: 3px;
+  }
+  
+  .sub-menu-item {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .sub-menu-item img {
+    transition: 0.4s;
+  }
+  
+  .sub-menu-item:hover img {
+    transform: scale(1.2);
+  }
+  
+  .sub-menu-item:hover div {
+    color: #d80f16;
+    font-weight: 500;
+  }
+  
+  
+  .item-title {
+    background: linear-gradient(transparent,rgba(0,0,0,.1),rgba(0,0,0,.3),rgba(0,0,0,.5),rgba(0,0,0,.7),rgba(0,0,0,.9));
+    position: absolute;
+    color: white;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: left;
+    padding: 5px 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  
+  .search {
+    width: 35%;
+    float: right;
+    margin-right: 30px;
+    position: relative;
+  }
+  
+  .search-box input[type = text] {
+    border-radius: 15px;
+    width: 100%;
+    padding: 5px 0px;
+    margin-top: -5px;
+    padding-left: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .search-box i {
+    position: absolute;
+    top: 4px;
+    right: 10px;
+    color: #ccc;
+  }
+  
+  .header-icon-user {
+    padding: 10px 0px;
+  }
+  
+  .header-icon-user .icon {
+    float: right;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    border-radius: 20px;
+    background-color: #eee;
+    margin-right: 10px;
+  }
+  
+  .icon i {
+    font-size: 20px;
+    padding-top: 9px;
+  }
+  
+  .icon.login {
+    color: white;
+    background-color: gray;
+  }
+  
+  .icon.theme {
+    color: gray;
+  }
+  
+  .icon.info {
+    color: black;
+  }
+  
+  .anime-slider {
+    margin-bottom: 30px;
+  }
+  
+  .slider {
+    position: relative;
+  }
+  
+  .slider-button-play, .episode-button-play, .cartoon-button-play, .picked-button-play, .all-button-play, .all-upcoming, .episode-done {
+    width: 70px;
+    height: 70px;
+    background-color: rgb(44, 44, 44);
+    color: white;
+    text-align: center;
+    font-size: 36px;
+    border-radius: 50%;
+    padding: 10px 26px;
+    position: absolute;
+  }
+  
+  .slider-button-play {
+    bottom: 15px;
+    left: 15px;
+    z-index: 1;
+  }
+  
+  .episode-button-play, .cartoon-button-play, .picked-button-play, .all-button-play {
+    top: 10px;
+    left: 10px;
+    box-shadow: 0 0 10px #fff;
+    opacity: 0.9;
+    display: none;
+  }
+  
+  
+  .slider-info {
+    position: absolute;
+    background: transparent;
+    background-image: linear-gradient(transparent,rgba(0,0,0,.1),rgba(0,0,0,.3),rgba(0,0,0,.5));
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 23px 105px;
+    color: white;
+  }
+  
+  .slider-view {
+    font-size: 12px;
+  }
+  
+  .slider-info {
+    font-size: 24px;
+  }
+  
+  .sub-slider:hover {
+    opacity: 0.8;
+  }
+  .sub-slider {
+    transition: 0.3s;
+  }
+  
+  .episode, .cartoon, .manga, .movie, .picked, .all{
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .episode-description, .cartoon-description, .manga-description, .movie-description, .picked-description, .all-description {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: white;
+    padding: 10px 10px;
+    background: transparent;
+    background-image: linear-gradient(transparent,rgba(0,0,0,.1),rgba(0,0,0,.3),rgba(0,0,0,.5),rgba(0,0,0,.7),rgba(0,0,0,.9));
+  }
+  
+  .episode-chap {
+    width: 60%;
+    float: left;
+    padding: 2px;
+  }
+  
+  .episode-view {
+    float: right;
+  }
+  
+  .episode-title, .episode-chap, .cartoon-title, .movie-title, .picked-title, .all-title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  .episode-chap, .episode-view, .all-view {
+    font-size: 13px;
+  }
+  
+  .episode-title, .cartoon-title, .movie-title, .picked-title, .all-title {
+    font-size: 18px;
+  }
+  
+  .episode img {
+    transition: 0.3s;
+  }
+  
+  .episode:hover img {
+    transform: scale(1.2);
+  }
+  
+  .episode:hover .episode-button-play {
+    display: block;
+  }
+  
+  .anime-item .col-6 {
+    float: left;
+    color: #333;
+  }
+  
+  .cartoon {
+    border-top-left-radius: 45px;
+    border-top-right-radius: 45px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  
+  .cartoon img{
+    transition: 0.3s;
+  }
+  
+  .cartoon:hover img {
+    transform: scale(1.2);
+  }
+  
+  .cartoon:hover .cartoon-button-play {
+    display: block;
+  }
+  
+  .cartoon-view, .movie-view, .picked-view {
+    font-size: 12px;
+  }
+  
+  .manga {
+    border-radius: 15px;
+    transition: 0.3s;
+  }
+  
+  .manga-chap-info, .picked-chapter, .all-chapter {
+    position: absolute;
+    top: 0;
+    color: white;
+    font-size: 13px;
+    padding: 10px;
+  }
+  
+  .manga-chap {
+    border: 1px solid white;
+  }
+  
+  .manga-chap, .picked-chap, .all-chap {
+    background-color: rgba(0,0,0,.5);
+    padding: 0px 5px;
+  }
+  
+  .manga:hover {
+    opacity: 0.8;
+  }
+  
+  .picked:hover .picked-button-play {
+    display: block;
+  }
+  
+  .picked img{
+    transition: 0.3s;
+  }
+  
+  .picked:hover img {
+    transform: scale(1.2);
+  }
+  
+  .picked-chapter, .all-chapter {
+    right: 10px;
+    left: 90px;
+    top: 10px;
+    display: none;
+  }
+  
+  .picked-chap, .all-chap {
+    padding: 5px;
+  }
+  
+  .picked:hover .picked-chapter {
+    display: block;
+  }
+  
+  .ranking {
+    position: relative;
+    height: 115px;
+    padding-bottom: 10px;
+  }
+  
+  .one {
+    background: linear-gradient(-180deg,rgba(244,67,54,.9),rgba(244,67,54,.2));
+  }
+  
+  .two {
+    background: linear-gradient(-180deg,rgba(156,39,176,.9),rgba(156,39,176,.2));
+  }
+  
+  .three {
+    background: linear-gradient(-180deg,rgba(63,81,181,.9),rgba(63,81,181,.2));
+  }
+  
+  .four {
+    background: linear-gradient(-180deg,rgba(0,150,136,.9),rgba(0,150,136,.2));
+  }
+  
+  .five {
+    background: linear-gradient(-180deg,rgba(255,193,7,.9),rgba(255,193,7,.2));
+  }
+  
+  .six {
+    background: linear-gradient(-180deg,rgba(140,106,73,.9),rgba(140,106,73,.2));
+  }
+  
+  .ranking-thumbnail {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  
+  .ranking-top {
+    position: absolute;
+    right: 0;
+    color: white;
+    bottom: 0;
+    font-size: 40px;
+    font-weight: bold;
+    right: 5px;
+  }
+  
+  .ranking-name {
+    color: white;
+    padding: 5px 10px;
+  }
+  
+  .anime-ranking a {
+    text-decoration: none;
+  }
+  
+  .all:hover .all-button-play {
+    display: block;
+  }
+  
+  .all:hover .all-chapter {
+    display: block;
+  }
+  
+  .all img {
+    transition: 0.3s;
+  }
+  
+  .all:hover img {
+    transform: scale(1.2);
+  }
+  
+  .all-upcoming, .episode-done {
+    font-size: 15px;
+    top: 10px;
+    left: 10px;
+    padding: 13px;
+    font-weight: bold;
+    background-color: #d80f16;
+    opacity: 0.8;
+  }
+  
+  .all:hover .all-upcoming {
+    display: none;
+  }
+  
+  .episode-done {
+    background-color: green;
+  }
+  
+  .episode:hover .episode-done {
+    display: none;
+  }
+  
+  .episode-done {
+    padding: 14px 9px;
+  }
+  
+  .video, .total {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .video {
+    padding-top: 95px;
+  }
+  
+  .main-video {
+    width: 70%;
+    margin-bottom: -4px;
+  }
+  
+  .player-video {
+    max-width: 100%;
+  }
+  
+  .episode-video {
+    width: 29%;
+    border: 1px solid #ccc;
+  }
+  
+  .episode-video-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    border-bottom: 1px solid #ccc;
+    margin: 10px;
+    height: 30px;
+  }
+  
+  .episode-tab {
+    border-bottom: 2px solid red;
+  }
+  
+  .total-chapter input[type="number"] {
+    width: 70px;
+    text-align: center;
+    background-color: #eee;
+    border: 0;
+    padding-right: 20px;
+  }
+  
+  .total {
+    padding: 0px 10px;
+    font-size: 14px;
+    border-bottom: 1px solid #ccc;
+    height: 30px;
+  }
+  
+  .total-chapter {
+    position: relative;
+  }
+  
+  .total-chapter i {
+    position: absolute;
+    right: 5px;
+    color: #333;
+  }
+  
+  .video-chapter {
+    padding: 10px;
+    overflow-x: auto;
+    height: 410px;
+  }
+  
+  .item-video {
+    width: 50%;
+    margin-right: 10px;
+    overflow: hidden;
+  }
+  
+  .item-video img {
+    transition: 0.3s;
+    display: block;
+  }
+  
+  .item-video:hover img {
+    transform: scale(1.2);
+  }
+  
+  .item-video:active {
+    border: 2px dashed #d80f16;
+  }
+  
+  .item-1 {
+    display: flex;
+    margin-bottom: 10px;
+  }
+  
+  .video-item-info  {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 70%;
+  }
+  
+  .video-item-info a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .video-item-info:hover a {
+    color: #d80f16;
+  }
+  
+  .video-item-title {
+    font-size: 14px;
+  }
+  
+  .video-item-views {
+    font-size: 13px;
+  }
+  
+  .video-content {
+    width: 900px;
+    margin-top: 40px;
+  }
+  
+  .video-content-name {
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 0;
+    color: #333;
+  }
+  
+  .video-content-views {
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  
+  .video-content-react {
+    margin-top: 20px;
+    height: 30px;
+  }
+  
+  .video-like {
+    float: left;
+    margin-right: 10px;
+    background: #e5525e;
+  }
+  
+  .video-follow {
+    float: left;
+    background: #0e6f6a;
+  }
+  
+  .video-share {
+    float: right;
+    background: #4267b2;
+  }
+  
+  .video-like, .video-follow, .video-share {
+    padding: 4px 8px;
+    border-radius: 5px;
+    color: white;
+    font-size: 13px;
+    line-height: 20px;
+  }
+  
+  .count-box {
+    padding: 0px 5px;
+    border-radius: 5px;
+    background: white;
+    opacity: 0.99;
+    color: black;
+  }
+  
+  .video-content-info {
+    margin-top: 6px;
+  }
+  
+  .video-content-description {
+    margin-top: 15px;
+  }
+  
+  .video-info-tag {
+    margin: 10px 0px;
+    margin-right: 10px;
+  }
+  
+  .video-info-tag span {
+    margin-right: 5px;
+  }
+  
+  .font {
+    font-size: 15px;
+    line-height: 1.6;
+    color: black;
+  }
+  
+  .header-title {
+      text-align: center;
+      font-weight: bold;
+      font-size: 28px;
+      margin-bottom: 40px;
+  }
+
+  .address, .full-name, .email {
+      font-weight: bold;
+      font-size: 16px;
+  }
+
+  .sub-header {
+      margin-bottom: 10px;
+  }
