@@ -7,6 +7,7 @@
     <title>Vui ghê Anime</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="../fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
 
 </head>
 <body>
@@ -14,9 +15,13 @@
     <div class="header">
         <div class="container">
             <div class="row">
-                <div class="col-2">
+                <div class="col-2 icon-vuighe">
                     <div class="logo">
                         <img src="https://vuighe.net/assets/img/logo_v8.png" alt="">
+                    </div>
+
+                    <div class="menu-list-icon" >
+                        <i class="bi bi-list" onclick="unhide()"></i>
                     </div>
                 </div>
 
@@ -535,16 +540,16 @@
                         </div>
                 </div>
 
-                <div class="col-2">
+                <div class="col-2 font-icon">
                     <div class="header-icon-user">
-                        <a href="">
-                            <div class="icon login">
+                        <a href="#">
+                            <div class="icon login" onclick="unhideRight()">
                                 <i class="fa-solid fa-user"></i>    
                             </div>
                         </a>
 
                         <a href="">
-                            <div class="icon theme">                            
+                            <div class="icon theme">                        
                                 <i class="fa-solid fa-sun"></i>                           
                             </div>
                         </a>
@@ -558,12 +563,155 @@
                 </div>
             </div>
         </div>
+
+        <div class="left-menu">
+            <div class="left-logo">
+                    <img src="https://vuighe.net/assets/img/logo_v8.png" alt="">
+                    <i class="bi bi-x-lg" onclick="hide()"></i>
+            </div>
+
+            <div class="left-search">
+                <div class="left-search-box">
+                    <input type="text" name="search-box" id="" placeholder="Tìm kiếm anime">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+
+                <div class="left-menu-item">
+                    <i class="bi bi-film"></i>
+                    <a href="#">Anime</a> 
+                </div>
+
+                <div class="left-menu-item">
+                    <i class="bi bi-camera-fill"></i>
+                    <a href="#">Movie</a> 
+                </div>
+
+                <div class="left-menu-item">
+                    <i class="bi bi-newspaper"></i>
+                    <a href="#">Tin tức</a> 
+                </div>
+
+                <div class="left-menu-item">
+                    <i class="bi bi-book-fill"></i>
+                    <a href="#">Truyện</a> 
+                </div>
+
+                <div class="left-menu-item">
+                    <i class="bi bi-bar-chart-fill"></i>
+                    <a href="#">BXH</a> 
+                </div>
+            </div>
+        </div>
+
+        <div class="right-menu">
+            <div class="right-menu-header">
+                <i class="bi bi-x-lg" onclick="hideRight()"></i>
+                <div class="welcome">
+                    Chào khách!
+                </div>
+                <div class="user-icon">
+                    <i class="bi bi-person-circle"></i>
+                </div>
+                <div class="login-tab">
+                    <div class="login" onclick="login()">Đăng nhập</div>
+                    <div class="register" onclick="register()">Đăng ký</div>
+                </div>
+            </div>
+            <div class="user-login">
+                <form action="" class="form-login">
+
+                    <div class="acc">
+                        <label for="">Tên đăng nhập</label>
+                        <input type="text" placeholder="" />
+                        <i class="bi bi-person"></i>
+                    </div>
+
+                    <div class="pass">
+                        <label for="">Mật khẩu</label>
+                        <input type="text" placeholder="" />
+                        <i class="bi bi-lock"></i>
+                    </div>
+
+                    <div class="form-register">
+                        <div class="re-pass">
+                            <label for="">Nhập lại mật khẩu</label>
+                            <input type="text" placeholder="" />
+                            <i class="bi bi-person"></i>
+                        </div>
+
+                        <div class="username">
+                            <label for="">Tên hiển thị</label>
+                            <input type="text" placeholder="" />
+                            <i class="bi bi-chat-left-dots"></i>
+                        </div>
+
+                        <div class="email">
+                            <label for="">Email</label>
+                            <input type="text" placeholder="" />
+                            <i class="bi bi-envelope"></i>
+                        </div>
+
+                        <div class="gender">
+                            <label for="" class="gen">Giới tính</label>
+                            <input type="radio" name="gender" id="nam" value="Nam">
+                            <label for="">Nam</label>
+                            <input type="radio" name="gender" id="nu" value="Nữ">
+                            <label for="">Nữ</label>
+                        </div>
+
+                        <div class="birthday">
+                            <div class="day">
+                                <label for="">Ngày</label>
+                                <input type="number" name="" id="" min="1">
+                            </div>
+                            <div class="month">
+                                <label for="">Tháng</label>
+                                <input type="number" name="" id="" min="1">
+                            </div>
+                            <div class="year">
+                                <label for="">Năm</label>
+                                <input type="number" name="" id="" min="1900">
+                            </div>
+                        </div>
+
+                        <div class="btn-register">
+                            <button type="button" class="click-register">Đăng ký</button>
+                        </div>
+                    </div>
+
+                    <div class="login-form">
+                        <div class="save ">
+                            <input type="checkbox" name="" id="" checked>
+                            <label for="">Ghi nhớ</label>
+                            <a href="">Quên mật khẩu</a>
+                        </div>
+                        
+                        <div class="btn-login ">
+                            <button type="button" class="click-login">Đăng nhập</button>
+                        </div>
+
+                        <div class="line "></div>
+
+                        <div class="btn-face ">
+                            <button type="button" class="face">Đăng nhập bằng Facebook</button>
+                            <i class="bi bi-facebook"></i>
+                        </div>
+
+                        <div class="btn-gg ">
+                            <button type="button" class="gg">Đăng nhập bằng Google</button>
+                            <i class="bi bi-google"></i>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
     </div>
 
     <div class="anime-slider">
         <div class="container">
             <div class="row">
-                <div class="col-9">
+                <div class="col-9 main-slide">
                     <a href="">
                         <div class="slider">
                             <img src="https://s199.imacdn.com/vg/2022/03/20/5a14af1e19346a9a_e5ffac4950e075bc_19538516477838843118684.jpg" alt="">
@@ -578,7 +726,7 @@
                     </a>
                 </div>
 
-                <div class="col-3">
+                <div class="col-3 right-slide">
                     <div class="sub-slider">
                         <a href="">
                             <img src="https://s199.imacdn.com/vg/2022/03/24/4af060d567cdd37c_130287b1c0fd103b_2114241648099430361628.jpg" alt="">
@@ -601,7 +749,7 @@
             </div>
 
             <div class="row">
-                <div class="col-3">
+                <div class="col-3 down-slide">
                     <div class="sub-slider">
                         <a href="">
                             <img src="https://s199.imacdn.com/vg/2022/03/23/dec8eac4313b8f21_8873c5fda2dc8b4f_4582016480410141118684.jpg" alt="">
@@ -609,7 +757,7 @@
                     </div>
                 </div>
 
-                <div class="col-3">
+                <div class="col-3 down-slide">
                     <div class="sub-slider">
                         <a href="">
                             <img src="https://s199.imacdn.com/vg/2022/04/13/36b4627cc00756d8_1508b8decf0e730a_53012716498674109118684.jpg" alt="">
@@ -617,7 +765,7 @@
                     </div>
                 </div>
 
-                <div class="col-3">
+                <div class="col-3 down-slide">
                     <div class="sub-slider">
                         <a href="">
                             <img src="https://s199.imacdn.com/vg/2021/10/10/d8fee77267b28507_5ecea58161a03d8a_2225981633864797661628.jpg" alt="">
@@ -625,7 +773,7 @@
                     </div>
                 </div>
 
-                <div class="col-3">
+                <div class="col-3 down-slide">
                     <div class="sub-slider">
                         <a href="">
                             <img src="https://s199.imacdn.com/vg/2022/03/23/178dac546a7d5c1a_4f76b1895239b273_22962416480417967118684.jpg" alt="">
@@ -650,7 +798,7 @@
             </div>
 
             <div class="row">
-                <div class="col-3">
+                <div class="col-3 item">
                     <div class="episode">
                         <a href="">
                             <img src="https://s199.imacdn.com/vg/2022/05/27/08bdccf45edfb369_e103007e1db198a7_2548716536449627118684.jpg" alt="">
@@ -674,7 +822,7 @@
                     </div>
                 </div>
 
-                <div class="col-3">
+                <div class="col-3 item">
                     <div class="episode">
                         <a href="">
                             <img src="https://s199.imacdn.com/vg/2022/05/27/2d8318878b48416b_dfc89fcbf9efa272_3067716536407101118684.jpg" alt="">
@@ -698,7 +846,7 @@
                     </div>
                 </div>
 
-                <div class="col-3">
+                <div class="col-3 item">
                     <div class="episode">
                         <a href="">
                             <img src="https://s199.imacdn.com/vg/2022/05/27/e731cdb54c181a41_2481b867b38eca85_4310116536410194118684.jpg" alt="">
@@ -722,7 +870,7 @@
                     </div>
                 </div>
 
-                <div class="col-3">
+                <div class="col-3 item">
                     <div class="episode">
                         <a href="">
                             <img src="https://s199.imacdn.com/vg/2022/05/26/50765c10ff323a1f_e8576c8906f66731_4162716535101849118684.jpg" alt="">
@@ -746,7 +894,7 @@
                     </div>
                 </div>
 
-                <div class="col-3">
+                <div class="col-3 item">
                     <div class="episode">
                         <a href="">
                             <img src="https://s199.imacdn.com/vg/2020/04/23/c0d1f8831e7cb01a_3f84a8b8a17be70d_4022115876444531118684.jpg" alt="">
@@ -773,7 +921,7 @@
                     </div>
                 </div>
 
-                <div class="col-3">
+                <div class="col-3 item">
                     <div class="episode">
                         <a href="">
                             <img src="https://s199.imacdn.com/vg/2022/05/27/2bb07fb72e98071b_48081a2a077b8c4b_2245216535951569118684.jpg" alt="">
@@ -797,7 +945,7 @@
                     </div>
                 </div>
 
-                <div class="col-3">
+                <div class="col-3 item">
                     <div class="episode">
                         <a href="">
                             <img src="https://s199.imacdn.com/vg/2022/05/26/f7485644b8f0636f_8ac3aca1a006aac1_14208816535799298814814.jpg" alt="">
@@ -821,7 +969,7 @@
                     </div>
                 </div>
 
-                <div class="col-3">
+                <div class="col-3 item">
                     <div class="episode">
                         <a href="">
                             <img src="https://s199.imacdn.com/vg/2022/05/26/9bce3ea5f6485c83_dbfbe71f0013470a_17418516534987046756547.jpg" alt="">
@@ -845,7 +993,7 @@
                     </div>
                 </div>
 
-                <div class="col-3">
+                <div class="col-3 item">
                     <div class="episode">
                         <a href="">
                             <img src="https://s199.imacdn.com/vg/2022/05/26/0840f6b3e04a7170_a7928b9f90c63a7f_3623216535110149118684.jpg" alt="">
@@ -869,7 +1017,7 @@
                     </div>
                 </div>
 
-                <div class="col-3">
+                <div class="col-3 item">
                     <div class="episode">
                         <a href="">
                             <img src="https://s199.imacdn.com/vg/2022/05/26/e33bbe390edde361_0b56620d32fbdd8a_3668316535119265118684.jpg" alt="">
@@ -896,7 +1044,7 @@
                     </div>
                 </div>
 
-                <div class="col-3">
+                <div class="col-3 item">
                     <div class="episode">
                         <a href="">
                             <img src="https://s199.imacdn.com/vg/2022/05/26/6374f605801a0c27_4feb98be2c5fb7a7_3793816535100539118684.jpg" alt="">
@@ -920,7 +1068,7 @@
                     </div>
                 </div>
 
-                <div class="col-3">
+                <div class="col-3 item">
                     <div class="episode">
                         <a href="">
                             <img src="https://s199.imacdn.com/vg/2022/05/25/d8efc7ebd92616ff_3012234079e45e75_2693616534737566118684.jpg" alt="">
@@ -961,7 +1109,7 @@
             </div>
 
             <div class="row">
-                <div class="col-3">
+                <div class="col-3 news">
                     <div class="anime-post">
                         <div class="row">
                             <a href="#" class="anime-item">
@@ -980,7 +1128,7 @@
                     </div>
                 </div>
 
-                <div class="col-3">
+                <div class="col-3 news">
                     <div class="anime-post">
                         <div class="row">
                             <a href="#" class="anime-item">
@@ -999,7 +1147,7 @@
                     </div>
                 </div>
                 
-                <div class="col-3">
+                <div class="col-3 news">
                     <div class="anime-post">
                         <div class="row">
                             <a href="#" class="anime-item">
@@ -1018,7 +1166,7 @@
                     </div>
                 </div>
 
-                <div class="col-3">
+                <div class="col-3 news">
                     <div class="anime-post">
                         <div class="row">
                             <a href="#" class="anime-item">
@@ -1037,7 +1185,7 @@
                     </div>
                 </div>
            
-                <div class="col-3">
+                <div class="col-3 news">
                     <div class="anime-post">
                         <div class="row">
                             <a href="#" class="anime-item">
@@ -1056,7 +1204,7 @@
                     </div>
                 </div>
 
-                <div class="col-3">
+                <div class="col-3 news">
                     <div class="anime-post">
                         <div class="row">
                             <a href="#" class="anime-item">
@@ -1075,7 +1223,7 @@
                     </div>
                 </div>
 
-                <div class="col-3">
+                <div class="col-3 news">
                     <div class="anime-post">
                         <div class="row">
                             <a href="#" class="anime-item">
@@ -1094,7 +1242,7 @@
                     </div>
                 </div>
 
-                <div class="col-3">
+                <div class="col-3 news">
                     <div class="anime-post">
                         <div class="row">
                             <a href="#" class="anime-item">
@@ -1113,7 +1261,7 @@
                     </div>
                 </div>
             
-                <div class="col-3">
+                <div class="col-3 news">
                     <div class="anime-post">
                         <div class="row">
                             <a href="#" class="anime-item">
@@ -1132,7 +1280,7 @@
                     </div>
                 </div>
 
-                <div class="col-3">
+                <div class="col-3 news">
                     <div class="anime-post">
                         <div class="row">
                             <a href="#" class="anime-item">
@@ -1151,7 +1299,7 @@
                     </div>
                 </div>
 
-                <div class="col-3">
+                <div class="col-3 news">
                     <div class="anime-post">
                         <div class="row">
                             <a href="#" class="anime-item">
@@ -1170,7 +1318,7 @@
                     </div>
                 </div>
 
-                <div class="col-3">
+                <div class="col-3 news">
                     <div class="anime-post">
                         <div class="row">
                             <a href="#" class="anime-item">
@@ -1206,7 +1354,7 @@
             </div>
 
             <div class="row">
-                <div class="col-3">
+                <div class="col-3 ct">
                     <div class="cartoon">
                         <a href="">
                             <img src="https://s198.imacdn.com/ff/2022/04/25/918d85ef637af316_84057cccf5a2fb75_694141650878132216068.jpg" alt="">
@@ -1227,7 +1375,7 @@
                     </div>
                 </div>
 
-                <div class="col-3">
+                <div class="col-3 ct">
                     <div class="cartoon">
                         <a href="">
                             <img src="https://s198.imacdn.com/ff/2022/04/28/c068024d078b5513_3b25af747bbeb4f5_484751651146112716068.jpg" alt="">
@@ -1248,7 +1396,7 @@
                     </div>
                 </div>
 
-                <div class="col-3">
+                <div class="col-3 ct">
                     <div class="cartoon">
                         <a href="">
                             <img src="https://s198.imacdn.com/ff/2021/12/27/8ed8d5b63c090703_3f3852e763504138_2285221640621442116068.jpg" alt="">
@@ -1269,7 +1417,7 @@
                     </div>
                 </div>
 
-                <div class="col-3">
+                <div class="col-3 ct">
                     <div class="cartoon">
                         <a href="">
                             <img src="https://s198.imacdn.com/ff/2022/05/22/9483a5db9c9d9045_9e7d94c920112b06_389571653214844816068.jpg" alt="">
@@ -1292,7 +1440,7 @@
             </div>
 
             <div class="row">
-                <div class="col-3">
+                <div class="col-3 ct">
                     <div class="cartoon">
                         <a href="">
                             <img src="https://s198.imacdn.com/ff/2022/05/06/ae317df873ab1426_af71133b21f92e97_50096165179514583816.jpg" alt="">
@@ -1313,7 +1461,7 @@
                     </div>
                 </div>
 
-                <div class="col-3">
+                <div class="col-3 ct">
                     <div class="cartoon">
                         <a href="">
                             <img src="https://s198.imacdn.com/ff/2022/05/10/b23444546c7ff38e_933a5f5907db5fd1_2404531652126387116068.jpg" alt="">
@@ -1334,7 +1482,7 @@
                     </div>
                 </div>
 
-                <div class="col-3">
+                <div class="col-3 ct">
                     <div class="cartoon">
                         <a href="">
                             <img src="https://s198.imacdn.com/ff/2021/11/14/1fd0c068ae17c86c_9e2c59bb15e9461b_351141636876960516068.jpg" alt="">
@@ -1355,7 +1503,7 @@
                     </div>
                 </div>
                 
-                <div class="col-3">
+                <div class="col-3 ct">
                     <div class="cartoon">
                         <a href="">
                             <img src="https://s198.imacdn.com/ff/2022/04/16/0a3165ba007b0ad9_0664d5cdb335dbb6_693191650084501916068.jpg" alt="">
@@ -1393,7 +1541,7 @@
             </div>
 
             <div class="row">
-                <div class="col-2">
+                <div class="col-2 mg">
                     <div class="manga">
                         <a href="#" class="managa-link">
                             <img src="https://s199.imacdn.com/tt24/2020/02/28/8d6d35f1c174751e_35b873941cbe1e6f_52428158288498841.jpg" alt="">
@@ -1409,7 +1557,7 @@
                     </div>
                 </div>
 
-                <div class="col-2">
+                <div class="col-2 mg">
                     <div class="manga">
                         <a href="#" class="managa-link">
                             <img src="https://s199.imacdn.com/tt24/2022/05/03/85eb395126d8a3f8_dd8325d22bf492af_32873165157320289674.jpg" alt="">
@@ -1425,7 +1573,7 @@
                     </div>
                 </div>
 
-                <div class="col-2">
+                <div class="col-2 mg">
                     <div class="manga">
                         <a href="#" class="managa-link">
                             <img src="https://s199.imacdn.com/tt24/2022/01/30/4a6acc1fba84413b_249e941127f3790d_35151164352654959674.jpg" alt="">
@@ -1441,7 +1589,7 @@
                     </div>
                 </div>
 
-                <div class="col-2">
+                <div class="col-2 mg">
                     <div class="manga">
                         <a href="#" class="managa-link">
                             <img src="https://s199.imacdn.com/tt24/2022/03/29/bd8b8eb696ec29c7_f52238d7ab9bad48_25131164853253919674.jpg" alt="">
@@ -1457,7 +1605,7 @@
                     </div>
                 </div>
 
-                <div class="col-2">
+                <div class="col-2 mg">
                     <div class="manga">
                         <a href="#" class="managa-link">
                             <img src="https://s199.imacdn.com/tt24/2020/03/26/94cdf6ec5a01537d_b28b9a7c8449aac0_327681585241518445957.jpg" alt="">
@@ -1473,7 +1621,7 @@
                     </div>
                 </div>
 
-                <div class="col-2">
+                <div class="col-2 mg">
                     <div class="manga">
                         <a href="#" class="managa-link">
                             <img src="https://s199.imacdn.com/tt24/2020/07/12/c8cd471104891776_75329ffd061157d8_265301594552686345957.jpg" alt="">
@@ -1506,7 +1654,7 @@
             </div>
 
             <div class="row">
-                <div class="col-3"> 
+                <div class="col-3 collect"> 
                     <a href="">
                         <div class="collection">
                             <img src="https://s199.imacdn.com/vg/2022/03/05/803583cba5d569c2_3c4ab828e8e763bd_117964164647297779674.jpg" alt="">
@@ -1514,7 +1662,7 @@
                     </a>
                 </div>
 
-                <div class="col-3">
+                <div class="col-3 collect">
                     <a href="">
                         <div class="collection">
                             <img src="https://s199.imacdn.com/vg/2021/12/27/447d92824ddb9779_f3207425776138e9_98651164059040319674.jpg" alt="">
@@ -1522,7 +1670,7 @@
                     </a>
                 </div>
 
-                <div class="col-3">
+                <div class="col-3 collect">
                     <a href="">
                         <div class="collection">
                             <img src="https://s199.imacdn.com/vg/2021/09/29/819d6a79cd97836d_6bc30ef29cbd18e5_173292163292978929674.jpg" alt="">
@@ -1530,7 +1678,7 @@
                     </a>
                 </div>
 
-                <div class="col-3">
+                <div class="col-3 collect">
                     <a href="">
                         <div class="collection">
                             <img src="https://s199.imacdn.com/vg/2021/06/22/ba2d1585b27d5133_34047b8f19e96ceb_3441016243409554118684.jpg" alt="">
@@ -1555,7 +1703,7 @@
             </div>
 
             <div class="row">
-                <div class="col-2">
+                <div class="col-2 mv">
                     <div class="movie">
                         <a href="">
                             <img src="https://s199.imacdn.com/vg/2022/05/10/f5cbf7851820a58d_370e0ad8022e42ce_3471316521755813118684.jpg" alt="">
@@ -1573,7 +1721,7 @@
                     </div>
                 </div>
 
-                <div class="col-2">
+                <div class="col-2 mv">
                     <div class="movie">
                         <a href="">
                             <img src="https://s199.imacdn.com/vg/2022/05/10/2ec92af947e34d07_def5488874fff15f_4684516521757167118684.jpg" alt="">
@@ -1591,7 +1739,7 @@
                     </div>
                 </div>
 
-                <div class="col-2">
+                <div class="col-2 mv">
                     <div class="movie">
                         <a href="">
                             <img src="https://s199.imacdn.com/vg/2022/05/10/c171fa8c56383148_e88aac259f7ae204_3375616521757425118684.jpg" alt="">
@@ -1609,7 +1757,7 @@
                     </div>
                 </div>
 
-                <div class="col-2">
+                <div class="col-2 mv">
                     <div class="movie">
                         <a href="">
                             <img src="https://s199.imacdn.com/vg/2022/05/10/235a4792e43d5189_eeda4669c9bdd6a9_4475816521757788118684.jpg" alt="">
@@ -1627,7 +1775,7 @@
                     </div>
                 </div>
 
-                <div class="col-2">
+                <div class="col-2 mv">
                     <div class="movie">
                         <a href="">
                             <img src="https://s199.imacdn.com/vg/2022/05/10/46b14fbb8eda72b5_215d183116e47567_2710416521759699118684.jpg" alt="">
@@ -1645,7 +1793,7 @@
                     </div>
                 </div>
 
-                <div class="col-2">
+                <div class="col-2 mv">
                     <div class="movie">
                         <a href="">
                             <img src="https://s199.imacdn.com/vg/2022/05/10/400eaf18aa013565_a1f062c3d066bffe_3181016521759499118684.jpg" alt="">
@@ -1679,7 +1827,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-3">
+                <div class="col-3 pk">
                     <div class="picked">
                         <a href="">
                             <img src="https://s199.imacdn.com/vg/2015/05/atelier-escha-logy-alchemists-of-the-dusk-sky-large-1432285033.jpg" alt="">
@@ -1705,7 +1853,7 @@
                     </div>
                 </div>
 
-                <div class="col-3">
+                <div class="col-3 pk">
                     <div class="picked">
                         <a href="">
                             <img src="https://s199.imacdn.com/vg/2015/05/kaitou-joker-large-1432285068.jpg" alt="">
@@ -1731,7 +1879,7 @@
                     </div>
                 </div>
 
-                <div class="col-3">
+                <div class="col-3 pk">
                     <div class="picked">
                         <a href="">
                             <img src="https://s199.imacdn.com/vg/2015/05/chu-chuot-khong-gian-large-1432285004.jpg" alt="">
@@ -1757,7 +1905,7 @@
                     </div>
                 </div>
 
-                <div class="col-3">
+                <div class="col-3 pk">
                     <div class="picked">
                         <a href="">
                             <img src="https://s199.imacdn.com/vg/2015/05/amnesia-large-1432285009.jpg" alt="">
@@ -1783,7 +1931,7 @@
                     </div>
                 </div>
 
-                <div class="col-3">
+                <div class="col-3 pk">
                     <div class="picked">
                         <a href="">
                             <img src="https://s199.imacdn.com/vg/2020/05/24/395735fef7a77208_b7a4c54bf8f12487_46039159030997069674.jpg" alt="">
@@ -1809,7 +1957,7 @@
                     </div>
                 </div>
 
-                <div class="col-3">
+                <div class="col-3 pk">
                     <div class="picked">
                         <a href="">
                             <img src="https://s199.imacdn.com/vg/2021/01/09/0626ed891ae87907_695ca2115e410ae1_69859161019874479674.jpg" alt="">
@@ -1835,7 +1983,7 @@
                     </div>
                 </div>
 
-                <div class="col-3">
+                <div class="col-3 pk">
                     <div class="picked">
                         <a href="">
                             <img src="https://s199.imacdn.com/vg/2015/05/shukufuku-no-campanella-large-1432285075.jpg" alt="">
@@ -1861,7 +2009,7 @@
                     </div>
                 </div>
 
-                <div class="col-3">
+                <div class="col-3 pk">
                     <div class="picked">
                         <a href="">
                             <img src="https://s199.imacdn.com/vg/2018/01/03/43fd13e517690144_a6f0c454c5486354_3081215149558527185710.jpg" alt="">
@@ -1904,7 +2052,7 @@
             </div>
 
             <div class="row">
-                <div class="col-2">
+                <div class="col-2 rk">
                     <a href="">
                         <div class="ranking one">
                             <div class="ranking-thumbnail">
@@ -1918,7 +2066,7 @@
                     </a>
                 </div>
 
-                <div class="col-2">
+                <div class="col-2 rk">
                     <a href="">
                         <div class="ranking two">
                             <div class="ranking-thumbnail">
@@ -1932,7 +2080,7 @@
                     </a>
                 </div>
 
-                <div class="col-2">
+                <div class="col-2 rk">
                     <a href="">
                         <div class="ranking three">
                             <div class="ranking-thumbnail">
@@ -1946,7 +2094,7 @@
                     </a>
                 </div>
 
-                <div class="col-2">
+                <div class="col-2 rk">
                     <a href="">
                         <div class="ranking four">
                             <div class="ranking-thumbnail">
@@ -1960,7 +2108,7 @@
                     </a>
                 </div>
 
-                <div class="col-2">
+                <div class="col-2 rk">
                     <a href="">
                         <div class="ranking five">
                             <div class="ranking-thumbnail">
@@ -1974,7 +2122,7 @@
                     </a>
                 </div>
 
-                <div class="col-2">
+                <div class="col-2 rk">
                     <a href="">
                         <div class="ranking six">
                             <div class="ranking-thumbnail">
@@ -2003,7 +2151,7 @@
             </div>
 
             <div class="row">
-                <div class="col-3">
+                <div class="col-3 a">
                     <div class="all">
                         <a href="">
                             <img src="https://s199.imacdn.com/vg/2022/05/27/2ceedf626b08fc77_8103ca39531bc17f_5068516536345127118684.jpg" alt="">
@@ -2032,7 +2180,7 @@
                     </div>
                 </div>
 
-                <div class="col-3">
+                <div class="col-3 a">
                     <div class="all">
                         <a href="">
                             <img src="https://s199.imacdn.com/vg/2022/05/16/8ca16fa6be0a123f_333ae6da97358ada_4227516526877459118684.jpg" alt="">
@@ -2058,7 +2206,7 @@
                     </div>
                 </div>
 
-                <div class="col-3">
+                <div class="col-3 a">
                     <div class="all">
                         <a href="">
                             <img src="https://s199.imacdn.com/vg/2022/05/14/34b2ee9ca5a17c55_0103e48989a34819_5267716524686427118684.jpg" alt="">
@@ -2087,7 +2235,7 @@
                     </div>
                 </div>
 
-                <div class="col-3">
+                <div class="col-3 a">
                     <div class="all">
                         <a href="">
                             <img src="https://s199.imacdn.com/vg/2022/05/13/96fb1a23e208aacd_069dc893cf26f99a_4414316523887036118684.jpg" alt="">
@@ -2116,7 +2264,7 @@
                     </div>
                 </div>
 
-                <div class="col-3">
+                <div class="col-3 a">
                     <div class="all">
                         <a href="">
                             <img src="https://s199.imacdn.com/vg/2022/05/10/bf5e1d49a6e65b9c_2aa357c8fdb78d78_4367116521719627118684.jpg" alt="">
@@ -2145,7 +2293,7 @@
                     </div>
                 </div>
 
-                <div class="col-3">
+                <div class="col-3 a">
                     <div class="all">
                         <a href="">
                             <img src="https://s199.imacdn.com/vg/2022/05/10/691749b6281b18d0_6df2acf58c9cc613_2537116521718196118684.jpg" alt="">
@@ -2174,7 +2322,7 @@
                     </div>
                 </div>
 
-                <div class="col-3">
+                <div class="col-3 a">
                     <div class="all">
                         <a href="">
                             <img src="https://s199.imacdn.com/vg/2022/05/09/597750eeb7258d44_286da1965ed416ca_4707816520995193118684.jpg" alt="">
@@ -2200,7 +2348,7 @@
                     </div>
                 </div>
 
-                <div class="col-3">
+                <div class="col-3 a">
                     <div class="all">
                         <a href="">
                             <img src="https://s199.imacdn.com/vg/2022/05/06/bfd7d3a030d3f3e2_3ef55bc458355d2c_52259165185588889674.jpg" alt="">
@@ -2226,7 +2374,7 @@
                     </div>
                 </div>
 
-                <div class="col-3">
+                <div class="col-3 a">
                     <div class="all">
                         <a href="">
                             <img src="https://s199.imacdn.com/vg/2022/05/05/471cfd9fc5dfe09e_2abcdea077cc4cf5_3090016517329679118684.jpg" alt="">
@@ -2252,7 +2400,7 @@
                     </div>
                 </div>
 
-                <div class="col-3">
+                <div class="col-3 a">
                     <div class="all">
                         <a href="">
                             <img src="https://s199.imacdn.com/vg/2022/04/29/be0047189c33b662_cdf2d07c6d699285_36743165123279159674.jpg" alt="">
@@ -2278,7 +2426,7 @@
                     </div>
                 </div>
 
-                <div class="col-3">
+                <div class="col-3 a">
                     <div class="all">
                         <a href="">
                             <img src="https://s199.imacdn.com/vg/2022/04/26/26e115b2f320cd4b_05c277fb72b89d36_3996116509514119118684.jpg" alt="">
@@ -2307,7 +2455,7 @@
                     </div>
                 </div>
 
-                <div class="col-3">
+                <div class="col-3 a">
                     <div class="all">
                         <a href="">
                             <img src="https://s199.imacdn.com/vg/2022/04/15/e9019aef9908b80d_0e986f24f7eaef04_3674116500185432118684.jpg" alt="">
@@ -2344,5 +2492,7 @@
                 
         </div>
     </section>
+
+    <script src="script.js"></script>
 </body>
 </html>
