@@ -1,65 +1,80 @@
-function change(event){
-    var huyen = document.getElementById('huyen');
+function change(){
+  var tinh = document.getElementById('tinh').value;
+  
+  var huyen = document.getElementById('huyen');
 
-    for(const name in huyen){
-    if(event.target.value = "hai-phong") {
-      huyen.innerHTML =
-       `<select name="huyen" id="huyen">
-            <option value="le-lo">Le-loi</option>
-            <option value="123">123</option>
-            <option value="456">456</option>
-        </select>`; 
-    } else
-    if(event.target.value = "da-nang") {
-        huyen.innerHTML =
-         `<select name="huyen" id="huyen">
-              <option value="hoi-an">Hoi-an</option>
-              <option value="hue">Hue</option>
-              <option value="789">789</option>
-          </select>`;
-    } else 
-    if(event.target.value = "da-lat") {
-        huyen.innerHTML =
-         `<select name="huyen" id="huyen">
-              <option value="quang-trung">Quang-trung</option>
-              <option value="nguyen-trai">Nguyen-trai</option>
-              <option value="789">789</option>
-          </select>`;
-      }  
-    }
-      console.log(event);
+  if(tinh === "danang") {
+    huyen.innerHTML = 
+    `<select name="huyen" id="huyen">
+        <option value="hoakhanh">Hòa Khánh</option>
+        <option value="hoabac">Hòa Bắc</option>
+        <option value="thanhkhe">Thanh Khê</option>
+    </select>`
   }
+  else if (tinh === "haiphong") {
+    huyen.innerHTML =
+    `<select name="huyen" id="huyen">
+        <option value="leloi">Lê Lợi</option>
+        <option value="tambac">Tam Bạc</option>
+        <option value="chuvanan">Chu Văn An</option>
+    </select>`
+  }
+  else if (tinh === "dalat") {
+    huyen.innerHTML =
+    `<select name="huyen" id="huyen">
+        <option value="phuong1">Phường 1</option>
+        <option value="phuong2">Phường 2</option>
+        <option value="phuong3">Phường 3</option>
+    </select>`
+  } 
+  else {
+    huyen.innerHTML =
+    `<select name="huyen" id="huyen">
+        <option value="haibatrung">Hai-ba-trung</option>
+        <option value="hoangmai">Hoang-mai</option>
+        <option value="minhkhai">Minh-khai</option>
+    </select>`
+  } 
+}
 
- 
 
-    const danhSachTinh = {
-      hanoi: ["hai ba trưng", "tây hồ", "đống đa"],
-      haiphong: ["thuy nguyên", "ngô quyền", "tiên lãng"],
-      binhdinh: ["an nhơn", "hoai nhơn", "quy nhơn"],
-    };
+function changeHuyen() {
+  const danhSachHuyen = {
+    haibatrung: ["Bạch Mai", "Bách Khoa", "Thanh Nhàn"],
+    hoangmai: ["Lĩnh Nam", "Thúy Yên", "Pháp Vân"],
+    tayho: ["Thụy Khuê", "Yên Phụ", "Xuân La"],
 
-    let tinh = document.querySelector("#tinh");
-    let huyen = document.querySelector("#huyen");
-    let submit = document.querySelector("#submit");
-    let mess = document.querySelector("#mess");
+    hoakhanh: ["Hòa Khánh Nam", "Hòa Khánh Tây", "Hòa Khánh Bắc"],
+    hoabac: ["Hòa Bắc Nam", "Hoà Bắc Tây", "Hòa Bắc Đông"],
+    thanhkhe: ["Hòa Khê", "Chính Gián", "Xuân Hà"],
 
-    tinh.addEventListener("change", function() {
-      let tinhDuocChon = tinh.value;
-      let huyenCanThem =
-        ' <option value="" selected disabled hidden>Chon huyen</option>';
-      for (const prop in danhSachTinh) {
-        if (prop === tinh.value) {
-          // console.log(danhSachTinh[prop]);
-          danhSachTinh[prop].forEach((el) => {
-            huyenCanThem += `<option value="${el}">${el}</option>`;
-          });
-          huyen.innerHTML = huyenCanThem;
-        }
-      }
-    });
-    
-    submit.addEventListener("click", function() {
-      console.log(mess);
-      mess.innerHTML = "Huyen:" + huyen.value + "_" + "Tinh:" + tinh.value;
-    });
+    leloi: ["Lạch Tray", "Gia Viên", "Cầu Đất"],
+    tambac: ["Hồng Phong", "Phạm Hồng Thái", "Phan Bội Châu"],
+    chuvanan: ["Ngô Quyền", "Hàng Kênh", "Nghĩa Xá"],
+
+    phuong1: ["Phan Đình Phùng", "Trần Quốc Toản", "Đinh Tiên Hoàng"],
+    phuong2: ["Tà Nung", "Trạm Hành"],
+    phuong3: ["Xuân Thọ", "Xuân Trường"]
+  };
+
+  var xa = document.getElementById('xa');
+  var xaMoi = [];
+  var huyen = document.getElementById('huyen').value;
+
+  for(let i in danhSachHuyen) {
+    if (i === huyen) {
+      danhSachHuyen[i].forEach(function(item, index) {
+        xaMoi += `<option value ="${item}"> ${item}</option>`;
+      });
+    }
+    xa.innerHTML = xaMoi;
+  }
+}
+
+function hide() {
+  var mess = document.getElementsByClassName('mess');
+  console.log(mess);
+
+  mess[0].innerHTML = "Bạn đã lựa chọn Thành phố: " + `<b>${tinh.value}</b>` + " Huyện: " + `<b>${huyen.value }</b>`+ " Xã: " + `<b>${xa.value}</b>`;
+}
 

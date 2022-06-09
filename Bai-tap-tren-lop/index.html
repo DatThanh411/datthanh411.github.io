@@ -9,21 +9,25 @@
 
 </head>
 <body>
-    <button onlick="clickButton()">Click</button>
+    <button type="button" id="bt" onclick="hide()">Click</button>
 
-    <select name="tinh" id="tinh" onchange="change(event)">
-        <option value="ha-noi">Ha-noi</option>
-        <option value="hai-phong">Hai-phong</option>
-        <option value="da-nang">Da-nang</option>
-        <option value="da-lat">Da-lat</option>
+    <select name="tinh" id="tinh" onchange="change()">
+        <option value="hanoi">Ha-noi</option>
+        <option value="haiphong">Hai-phong</option>
+        <option value="danang">Da-nang</option>
+        <option value="dalat">Da-lat</option>
     </select>
 
-    <select name="huyen" id="huyen">
-        <option value="hai-ba-trung">Hai-ba-trung</option>
-        <option value="hoang-mai">Hoang-mai</option>
-        <option value="minh-khai">Minh-khai</option>
+    <select name="huyen" id="huyen" onchange="changeHuyen()">
+        <option value="haibatrung">Hai-ba-trung</option>
+        <option value="hoangmai">Hoang-mai</option>
+        <option value="tayho">Tây Hồ</option>
     </select>
 
+    <select name="xa" id="xa">
+    </select>
+
+    <div class="mess">321321</div>
     <script src="script.js"></script>
 </body>
 </html>
