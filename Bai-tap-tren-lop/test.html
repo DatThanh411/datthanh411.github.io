@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="number" name="diem" id="diem" placeholder="Nhập điểm" min="1" />
+
+    <button type="tim-kiem" onclick="unhide()">Tìm kiếm</button>
+
+    <table class="table">
+
+    </table>
+
+    <script>
+        var students = [
+            {name: "Hà", diem: "10"},
+            {name: "Long", diem: "7"},
+            {name: "Thảo", diem: "1"},
+            {name: "Minh", diem: "9"},
+            {name: "Đạt", diem: "8"},
+            {name: "Nghĩa", diem: "5"},
+            {name: "Tuấn", diem: "4"},
+        ];
+
+        function xepLoai() {
+            var result = students.map(o =>{
+                if(o.diem > 8) {
+                    o.xeploai = "Giỏi";
+                }
+                else if (o.diem > 5 && o.diem <= 7 ) {
+                    o.xeploai = "Khá";
+                }
+                else {
+                    o.xeploai = "Trung bình";
+                }
+                return o;
+            });
+        }
+
+        function unhide(){
+            var table = document.getElementsByClassName('table');
+            var name = students.name;
+
+            var result2 = students.diem;
+            var diem = document.getElementById('diem').value;
+            for (diem in result2 ) {
+                if (diem === result2) {
+                    table[0].innerHTML = name + result2;
+                }
+            }
+        }
+
+  
+    </script>
+</body>
+</html>

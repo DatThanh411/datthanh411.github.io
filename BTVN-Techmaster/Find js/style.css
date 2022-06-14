@@ -1,0 +1,198 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  
+    font-family: sans-serif;
+  }
+  
+  img {
+    max-width: 100%;
+  }
+  
+  .container {
+    width: 1300px;
+    margin: 0 auto;
+  
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  
+  .row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  
+    margin-top: -7px;
+    margin-left: -5px;
+    margin-right: -5px;
+  }
+  
+  [class*='col-'] {
+    margin-top: 10px;
+  
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  
+  .col-1 {
+    width: 8.333333%;
+  }
+  
+  .col-2 {
+    width: 16.666667%;
+  }
+  
+  .col-3 {
+    width: 25%;
+  }
+  
+  .col-4 {
+    width: 33.333333%;
+  }
+  
+  .col-5 {
+    width: 41.666667%;
+  }
+  
+  .col-6 {
+    width: 50%;
+  }
+  
+  .col-7 {
+    width: 58.333333%;
+  }
+  
+  .col-8 {
+    width: 66.666667%;
+  }
+  
+  .col-9 {
+    width: 75%;
+  }
+  
+  .col-10 {
+    width: 83.333333%;
+  }
+  
+  .col-11 {
+    width: 91.666667%;
+  }
+  
+  .col-12 {
+    width: 100%;
+  }
+
+  .d-flex {
+    display: flex;
+  }
+
+  .j-center {
+    justify-content: center;
+  }
+
+  .j-between {
+      justify-content: space-between;
+  }
+
+  .a-center {
+    align-items: center;
+  }
+
+  .header {
+      border: 1px solid #e5e5e5;
+      position: relative;
+      background: white;
+      padding: 10px 0px;
+  }
+
+  .menu-search {
+      margin: 10px 0px;
+  }
+
+  .name, .location, .job {
+      width: 25%;
+      margin-left: 5px;
+      border-radius: 5px;
+      border: 1px solid #e5e5e5;
+  }
+
+  .box {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #e5e5e5;
+  }
+
+  .text {
+     border: 0;
+  }
+
+    .label {
+      margin-bottom: 5px;
+      color: #5d677a;
+    }
+
+
+  .find  {
+      background-image: linear-gradient(to right, #86cb49, #169b74, #86cb49);
+      width: 35px;
+      height: 35px;
+      border-radius: 5px;
+      cursor: pointer;
+  }
+
+  .find i {
+      font-size: 18px;
+      color: white;
+  }
+
+  .more {
+      margin-top: 5px;
+      margin-left: 15px;
+  }
+
+  .more i {
+      font-size: 24px;
+      margin: auto;
+      cursor: pointer;
+  }
+
+  .sub-menu {
+      position: absolute;
+      left: 0;
+      right: 0;
+      border-bottom: 1px solid #e5e5e5;
+      transition: .8s;
+      z-index: -1000;
+  }
+
+  .button-submit {
+      float: right;
+      margin-right: 125px;
+      margin-top: 20px;
+  }
+
+  .find-now, .clear {
+      padding: 5px;
+  }
+  
+  .white {
+      background: white;
+  }
+
+  table, th, td {
+    border: 1px solid black;
+  }
+
+  th {
+    width: 10%;
+  }
+
+  .body {
+    position: absolute;
+    right: 0;
+    left: 0;
+    z-index: -2000;
+
+    transition: .8s;
+  }
