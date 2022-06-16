@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Bài 3</h1>
+
+    <form name="search">
+      <label>Bạn đang tìm gì:
+        <input type="text" name="search" id="input">
+      </label>
+      <button type="button" id="btn" onclick="find()">Tìm kiếm!</button>
+    </form>
+  
+    <hr>
+  
+    <form name="search-person">
+      Tìm kiếm nâng cao:
+      <table id="salary">
+        <tbody> 
+          <tr>
+            <td>Lương:</td>
+            <td id="range-list">
+              <label>
+                <input type="radio" name="salary" value="young" class="sal"><18tr </label>
+              <label>
+                <input type="radio" name="salary" value="mature" class="sal">18-30 tr</label>
+              <label>
+                <input type="radio" name="salary" value="senior" class="sal"> > 50tr</label>
+            </td>
+          </tr>
+  
+          <tr>
+            <td>Điều kiện đi kèm:</td>
+            <td>
+              <select name="level" id="level">
+                <option value="employee">employee</option>
+                <option value="student">student</option>
+              </select>
+              <select name="status" id="status">
+                <option value="nhan-vien-chinh-thuc">nhan vien chinh thuc</option>
+                <option value="thoi vu tu do">thoi vu tu do</option>
+              </select>
+            </td>
+          </tr>
+  
+        </tbody>
+      </table>
+  
+      <button type="button" id="btnUpgrade" onclick="findMore()" >Tìm kiếm~</button>
+    </form>
+
+    <form action="resultTable">
+      <table>
+        <thead>
+          <tr>
+            <th>Tên công ty</th>
+            <th>Công việc</th>
+            <th>Địa điểm</th>
+            <th>Mức lương</th>
+            <th>Chức vụ</th>
+            <th>Thời gian đăng</th>
+            <th>Hình thức việc làm</th>
+            <th>Chế độ</th>
+          </tr>
+        </thead>
+        <tbody id="content">
+
+        </tbody>
+        <tfoot></tfoot>
+      </table>
+    </form>
+  
+    <script src="script.js"></script>
+</body>
+</html>
