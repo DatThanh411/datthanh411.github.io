@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
+</head>
+<body>
+    <button class="btn-add" onclick="hideAdd()">Add</button>
+    <button class="btn-update" onclick="hideUpdate()">Update</button>
+    <button class="btn-delete" onclick="hideDelete()">Delete</button>
+
+    <div class="content">
+
+        <table id="table">
+            <div id="main"></div>
+        
+            <caption>Thông tin khách hàng</caption>
+            <thead>
+                <tr>
+                    <th>Descreiption</th>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Pice</th>      
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+        <div class="form-login" style="display:none;">
+            <form action="">
+                <div class="add " style="margin-top: 10px;">
+                    <input type="text"  name="" class="descreiption" placeholder="Nhập mô tả">
+                </div>
+
+                <div class="add ">
+                    <input type="text"  name="" class="id" placeholder="Nhập id">
+                </div>
+                
+                <div class="add ">
+                    <input type="text"  name="" class="name" placeholder="Nhập tên">
+                </div>
+
+                <div class="add ">
+                    <input type="text" name="" class="price" placeholder="Nhập giá">
+                </div>
+
+                <div class="create-new">
+                    <button type="button" class="new" onclick="add()">
+                        Tạo mới
+                    </button>
+                </div>
+
+            </form>
+        </div>
+
+        <div class="form-details-update" style="display:none;">
+            <form action="">
+                <div class="update " style="margin-top: 10px;">
+                    <input type="text" name="" class
+                    ="descreiption-update all" placeholder="Nhập mô tả mới">
+                </div>
+
+                <div class="update">
+                    <input type="text"  name="" class="id-update all" placeholder="Nhập id cần cập nhật">
+                </div>
+                
+                <div class="update">
+                    <input type="text" name="" class="name-update all" placeholder="Nhập tên mới">
+                </div>
+
+                <div class="update">
+                    <input type="text" name="" class="price-update all" placeholder="Nhập giá mới">
+                </div>
+
+                <div class="create-new">
+                    <button type="button" class="new" onclick="update()">
+                        Cập nhật
+                    </button>
+                </div>
+
+            </form>
+        </div>
+
+        <div class="form-delete" style="display:none;">
+            <form action="">
+                <div class="delete" style="margin-top: 10px;">
+                    <input type="text" class="delete-id" name="" placeholder="Nhập ID cần xóa">
+                </div>
+
+                <div class="create-new">
+                    <button type="button" class="new" onclick="del()">
+                        Xóa
+                    </button>
+                </div>
+
+            </form>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
