@@ -9,7 +9,7 @@ fetch('https://628b4592667aea3a3e2b48e5.mockapi.io/product')
                   <td>${a.description}</td>
                   <td style="text-align:center;">${a.id}</td>
                   <td>${a.name}</td>
-                  <td style="text-align:center;">${a.pice}</td>
+                  <td style="text-align:center;">${a.price}</td>
                  
                   
               </tr>`
