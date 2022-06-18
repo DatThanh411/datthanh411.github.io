@@ -6,13 +6,11 @@ fetch('https://628b4592667aea3a3e2b48e5.mockapi.io/product')
   let newList = data.map(a => {
     return` 
      <tr>
-                  <td>${a.description}</td>
-                  <td style="text-align:center;">${a.id}</td>
-                  <td>${a.name}</td>
-                  <td style="text-align:center;">${a.price}</td>
-                 
-                  
-              </tr>`
+        <td style="text-align:center;">${a.id}</td>
+        <td>${a.name}</td>
+        <td>${a.description}</td>
+        <td style="text-align:center;">${a.price}</td>
+    </tr>`
   }).join(",")
   .replaceAll(/,/g, " ");
   document.querySelector('tbody').innerHTML = newList
