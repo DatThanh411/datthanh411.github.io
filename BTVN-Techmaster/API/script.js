@@ -1,20 +1,24 @@
-fetch('https://628b4592667aea3a3e2b48e5.mockapi.io/product')
-  .then(response => response.json())
-  .then(data => {
-   $('#main').html();
-  console.log(data)
-  let newList = data.map(a => {
-    return` 
-     <tr>
-        <td style="text-align:center;">${a.id}</td>
-        <td>${a.name}</td>
-        <td>${a.description}</td>
-        <td style="text-align:center;">${a.price}</td>
-    </tr>`
-  }).join(",")
-  .replaceAll(/,/g, " ");
-  document.querySelector('tbody').innerHTML = newList
-});
+function showProducts() {
+  fetch('https://628b4592667aea3a3e2b48e5.mockapi.io/product')
+    .then(response => response.json())
+    .then(data => {
+    $('#main').html();
+    console.log(data)
+    let newList = data.map(a => {
+      return` 
+      <tr>
+          <td style="text-align:center;">${a.id}</td>
+          <td>${a.name}</td>
+          <td>${a.description}</td>
+          <td style="text-align:center;">${a.price}</td>
+      </tr>`
+    }).join(",")
+    .replaceAll(/,/g, " ");
+    document.querySelector('tbody').innerHTML = newList
+  });
+}
+
+showProducts();
 
 function add() {
   let description = $(".descreiption").val();
@@ -39,7 +43,7 @@ function add() {
     .then(data => {
     //hiển thị thông tin products lên trang
     console.log(data)
-    location.reload();
+    showProducts();
   });
 }
 
@@ -66,7 +70,7 @@ function update() {
     .then(data => {
     //hiển thị thông tin products lên trang
     console.log(data) 
-    location.reload();
+    showProducts;
   });
 }
 
@@ -80,7 +84,7 @@ function del() {
     .then(data => {
     //hiển thị thông tin products lên trang
     console.log(data)
-    location.reload();
+    showProducts();
   });
 
 }

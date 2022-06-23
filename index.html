@@ -1,49 +1,636 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.2.0-beta1 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"  integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <title>Web Test</title>
-    <script src="pratice-js/Kiemtra.js"></script>
-    <meta name="google-site-verification" content="nZiWlnaDQlEYy1Odv6hiTEAso1cAz49IThxCdFUa5SI" />
-</head>
-<body>
-    <script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+
+  </head>
+  <body>
       
-                // Bài Thực hành trên lớp
-                function inSo(x){
-                    for (let i = 1; i <= 100; i++ ){
-                        if(i % 5 == 0 && i % 3 == 0){
-                            document.write('<p style = "color: blue">' + i + '</p>');
-                        }
-                        else if(i % 3 == 0){
-                            document.write('<p style = "color: orange">' + i + '</p>');
-                        }
-                        else if(i % 5 == 0){
-                            document.write('<p style = "color: red">' + i + '</p>');
-                        }
-                        else {
-                            document.write('<p style = "color: black">' + i + '</p>');
-                        }
-                    }
-                }
+    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+          <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="http://trydo.rainbowit.net/assets/images/logo/logo-all-dark.png" alt="">
+            </a>
+            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
 
-                function timSoNhoNhat(a, b, c){
-                    if (a < b && a < c) {
-                            return a;
-                        } 
-                        else if (b < a && b < c ) {
-                            return b;
-                        }
-                        else {
-                            return c;
-                        }
-                    } 
+                <ul class="navbar-nav me-auto mt-2 mt-lg-0 ">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="visually-hidden">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Service</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">About <span class="visually-hidden">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Pages</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Blocks<span class="visually-hidden">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
 
+
+                    <!-- <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownId">
+                            <a class="dropdown-item" href="#">Action 1</a>
+                            <a class="dropdown-item" href="#">Action 2</a>
+                        </div>
+                    </li> -->
+
+                </ul>
+                <form class="d-flex my-2 my-lg-0 ml">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">BUY NOW</button>
+                </form>
+            </div>     
+      </div>
+    </nav>
+
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="img/Capture.JPG" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block cc1">
+              <h1>AGENCY.</h1>
+              <p>There are many variations of passages but the majority have suffered alteration.</p>
+              <div class="slide-btn">
+                <a href="" class="btn-slide">CONTACT US</a>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="img/Capture2.JPG" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block cc2">
+              <h1>BUSINESS.</h1>
+              <p>There are many variations of passages but the majority have suffered alteration.</p>
+              <div class="slide-btn">
+                <a href="" class="btn-slide">CONTACT US</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    
+    <div class="introduce">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-12  col-md-6 col-lg-4 item-intro">
+            <a href="" class="item-box">
+              <div class="info">
+                <div class="icon-intro">
+                  <i class="bi bi-chat-left-text"></i>
+                </div>
+                <div class="content-intro">
+                  <h3>Business Stratagy</h3>
+                  <p>I throw myself down among the tall grass by the stream as I lie close to the earth.</p>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-12  col-md-6 col-lg-4 item-intro">
+            <a href="" class="item-box">
+              <div class="info">
+                <div class="icon-intro">
+                  <i class="bi bi-card-text"></i>
+                </div>
+                <div class="content-intro">
+                  <h3>Website Development</h3>
+                  <p>I throw myself down among the tall grass by the stream as I lie close to the earth.</p>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-12  col-md-6 col-lg-4 item-intro">
+            <a href="" class="item-box">
+              <div class="info">
+                <div class="icon-intro">
+                  <i class="bi bi-people"></i>
+                </div>
+                <div class="content-intro">
+                  <h3>Marketing & Reporting</h3>
+                  <p>I throw myself down among the tall grass by the stream as I lie close to the earth.</p>
+                </div>
+              </div>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="service">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="service-title">
+              <h2>Services</h2>
+              <p>There are many variations of passages of Lorem Ipsum available, but.</p>
+              <div class="service-btn">
+                <a href="" class="btn-ser">
+                  <span>Request Custom Service</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-9" style="padding-top: 20px;">
+            <div class="row">
+
+              <div class="col-lg-4 col-md-4 col-sm-12">
+                <div class="item-thumbnail">
+                  <div class="thumbnail">
+                    <img src="http://trydo.rainbowit.net/assets/images/featured/corporate-01.jpg" alt="">
+                  </div>
+                  <div class="content-thumbnail">
+                    <h3>
+                      <a href="">Thinking Development</a>
+                    </h3>
+                    <p>I throw myself down among the tall grass by the stream</p>
+                  </div>
+                  <a href="" class="btn-thumb">
+                    <span>Read More</span>
+                  </a>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-4 col-sm-12">
+                <div class="item-thumbnail">
+                  <div class="thumbnail">
+                    <img src="http://trydo.rainbowit.net/assets/images/featured/corporate-02.jpg" alt="">
+                  </div>
+                  <div class="content-thumbnail">
+                    <h3>
+                      <a href="">Business Consulting</a>
+                    </h3>
+                    <p>I throw myself down among the tall grass by the stream</p>
+                  </div>
+                  <a href="" class="btn-thumb">
+                    <span>Read More</span>
+                  </a>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-4 col-sm-12">
+                <div class="item-thumbnail">
+                  <div class="thumbnail">
+                    <img src="	http://trydo.rainbowit.net/assets/images/featured/corporate-03.jpg" alt="">
+                  </div>
+                  <div class="content-thumbnail">
+                    <h3>
+                      <a href="">Biseness Development</a>
+                    </h3>
+                    <p>I throw myself down among the tall grass by the stream</p>
+                  </div>
+                  <a href="" class="btn-thumb">
+                    <span>Read More</span>
+                  </a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="counterup">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-4 col-md-4 counter-item">
+            <h4>199</h4>
+            <p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those.</p>
+          </div>
+
+          <div class="col-lg-4 col-md-4 counter-item">
+            <h4>575</h4>
+            <p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those.</p>
+          </div>
+
+          <div class="col-lg-4 col-md-4 counter-item">
+            <h4>69</h4>
+            <p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those.</p>
+          </div>
+        </div>
+      </div>
+     
+    </div>
+
+    <div class="working-area">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-6 wk">
+            <div class="wk-img">
+              <img src="http://trydo.rainbowit.net/assets/images/about/about-4.png" alt="">
+            </div>
+          </div>
+
+          <div class="col-lg-6 wk">
+            <div class="wk-process">
+              <div class="wk-title">
+                <h2>Working Process</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim exercitationem impedit iure quia quo recusandae?</p>
+              </div>
+              <div class="wk-action">
+                <div class="action">Your Business Skills But Never Stop Improving.</div>
+                <div class="action">Tactics That Can Help Your Business Grow.</div>
+                <div class="action">The Secret of Successful Business.</div>
+                <div class="action">How To Start A Business With Business.</div>
+              </div>
+              <div class="wk-btn">
+                <a href="" class="wk-a">SEE HOW IT WORKS</a>
+              </div>
+            </div>
+          </div>
           
+        </div>
+      </div>
+    </div>
 
-    </script>
-</body>
+    <div class="manage-team">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-12">
+            <div class="mg-title">
+              <h2>Managing Team</h2>
+              <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+            <div class="mg-team">
+              <div class="mgt-thumbnail">
+                <img src="http://trydo.rainbowit.net/assets/images/team/team-01.jpg" alt="">
+              </div>
+              <div class="mgt-content">
+                <h4>Jone Due</h4>
+                <p>Sr. Web Developer</p>
+              </div>
+              <div class="mgt-social d-flex">
+                <a href=""><i class="bi bi-facebook"></i></a>
+                <a href=""><i class="bi bi-linkedin"></i></a>
+                <a href=""><i class="bi bi-twitter"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+            <div class="mg-team">
+              <div class="mgt-thumbnail">
+                <img src="	http://trydo.rainbowit.net/assets/images/team/team-03.jpg" alt="">
+              </div>
+              <div class="mgt-content">
+                <h4>John Dou</h4>
+                <p>Sr. Graphic Designer</p>
+              </div>
+              <div class="mgt-social d-flex">
+                <a href=""><i class="bi bi-facebook"></i></a>
+                <a href=""><i class="bi bi-linkedin"></i></a>
+                <a href=""><i class="bi bi-twitter"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+            <div class="mg-team">
+              <div class="mgt-thumbnail">
+                <img src="	http://trydo.rainbowit.net/assets/images/team/team-02.jpg" alt="">
+              </div>
+              <div class="mgt-content">
+                <h4>Fatima Asrafi</h4>
+                <p>Front-end Engineer</p>
+              </div>
+              <div class="mgt-social d-flex">
+                <a href=""><i class="bi bi-facebook"></i></a>
+                <a href=""><i class="bi bi-linkedin"></i></a>
+                <a href=""><i class="bi bi-twitter"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+            <div class="mg-team">
+              <div class="mgt-thumbnail">
+                <img src="	http://trydo.rainbowit.net/assets/images/team/team-06.jpg" alt="">
+              </div>
+              <div class="mgt-content">
+                <h4>Jone Due</h4>
+                <p>Sr. Web Developer</p>
+              </div>
+              <div class="mgt-social d-flex">
+                <a href=""><i class="bi bi-facebook"></i></a>
+                <a href=""><i class="bi bi-linkedin"></i></a>
+                <a href=""><i class="bi bi-twitter"></i></a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="about-us">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-6 order-1 about">
+            <div class="about-process">
+
+              <div class="about-title">
+                <h2>About</h2>
+                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which dont look even slightly believable.</p>
+              </div>
+
+              <div class="about-action">
+                <h4>Lorem ipsum dolor sit.</h4>
+                <ul class="about-ul">
+                  <li><i class="bi bi-check2"></i>The Philosophy Of business analytics</li>
+                  <li><i class="bi bi-check2"></i>Fast-Track Your business</li>
+                  <li><i class="bi bi-check2"></i>Lies And Damn Lies About business</li>
+                  <li><i class="bi bi-check2"></i>The Ultimate Deal On business</li>
+                </ul>
+              </div>
+
+              <div class="about-action">
+                <h4>Lorem ipsum dolor sit.</h4>
+                <ul class="about-ul">
+                  <li><i class="bi bi-check2"></i>Proof That business Really Works</li>
+                  <li><i class="bi bi-check2"></i>Here Is What You Should Do For Your business</li>
+                  <li><i class="bi bi-check2"></i>The Hidden Mystery Behind business</li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+          
+          <div class="col-lg-6 about">
+            <div class="about-img">
+              <img src="http://trydo.rainbowit.net/assets/images/about/about-3.png" alt="">
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+
+    <div class="brand">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-4 col-md-6 col-sm-6 br d-flex j-center a-center">
+            <div class="brand-img">
+              <img src="http://trydo.rainbowit.net/assets/images/brand/brand-01.png" alt="">
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 col-sm-6 br d-flex j-center a-center">
+            <div class="brand-img">
+              <img src="	http://trydo.rainbowit.net/assets/images/brand/brand-02.png" alt="">
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 col-sm-6 br d-flex j-center a-center">
+            <div class="brand-img">
+              <img src="http://trydo.rainbowit.net/assets/images/brand/brand-03.png" alt="">
+            </div>
+          </div>
+        
+          <div class="col-lg-4 col-md-6 col-sm-6 br d-flex j-center a-center">
+            <div class="brand-img">
+              <img src="http://trydo.rainbowit.net/assets/images/brand/brand-04.png" alt="">
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 col-sm-6 br d-flex j-center a-center">
+            <div class="brand-img">
+              <img src="	http://trydo.rainbowit.net/assets/images/brand/brand-05.png" alt="">
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 col-sm-6 br d-flex j-center a-center">
+            <div class="brand-img">
+              <img src="	http://trydo.rainbowit.net/assets/images/brand/brand-06.png" alt="">
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="price-plan">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-12">
+            <div class="mg-title">
+              <h2>Pricing Plan</h2>
+              <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6 pl">
+            <div class="pricing-table">
+              <div class="plan">
+                <div class="plan-header">
+                  <h4>Free</h4>
+                  <div class="pricing">
+                    <div class="price">29</div>
+                    <div class="sub-price">USD Per Month</div>
+                  </div>
+                </div>
+                <div class="plan-body">
+                  <ul class="plan-ul">
+                    <li><i class="bi bi-check2"></i>5 PPC Campaigns</li>
+                    <li><i class="bi bi-check2"></i>Digital Marketing</li>
+                    <li><i class="bi bi-check2"></i>Marketing Agency</li>
+                    <li><i class="bi bi-check2"></i>Seo Friendly</li>
+                    <li><i class="bi bi-check2"></i>UI/UX designs</li>
+                  </ul>
+                </div>
+                <div class="plan-footer">
+                  <a href="" class="plan-btn">PURCHASE NOW</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 pl">
+            <div class="pricing-table">
+              <div class="plan">
+                <div class="plan-header">
+                  <h4>Business</h4>
+                  <div class="pricing">
+                    <div class="price">29</div>
+                    <div class="sub-price">USD Per Month</div>
+                  </div>
+                </div>
+                <div class="plan-body">
+                  <ul class="plan-ul">
+                    <li><i class="bi bi-check2"></i>5 PPC Campaigns</li>
+                    <li><i class="bi bi-check2"></i>Digital Marketing</li>
+                    <li><i class="bi bi-check2"></i>Marketing Agency</li>
+                    <li><i class="bi bi-check2"></i>Seo Friendly</li>
+                    <li><i class="bi bi-check2"></i>UI/UX designs</li>
+                  </ul>
+                </div>
+                <div class="plan-footer">
+                  <a href="" class="plan-btn">PURCHASE NOW</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 pl">
+            <div class="pricing-table">
+              <div class="plan">
+                <div class="plan-header">
+                  <h4>Advanced</h4>
+                  <div class="pricing">
+                    <div class="price">29</div>
+                    <div class="sub-price">USD Per Month</div>
+                  </div>
+                </div>
+                <div class="plan-body">
+                  <ul class="plan-ul">
+                    <li><i class="bi bi-check2"></i>5 PPC Campaigns</li>
+                    <li><i class="bi bi-check2"></i>Digital Marketing</li>
+                    <li><i class="bi bi-check2"></i>Marketing Agency</li>
+                    <li><i class="bi bi-check2"></i>Seo Friendly</li>
+                    <li><i class="bi bi-check2"></i>UI/UX designs</li>
+                  </ul>
+                </div>
+                <div class="plan-footer">
+                  <a href="" class="plan-btn">PURCHASE NOW</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="latest-news">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-12">
+            <div class="mg-title">
+              <h2>Latest News</h2>
+              <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-4 col-sm-6">
+            <div class="thumb">
+              <div class="news-thumbnail">
+                <img src="http://trydo.rainbowit.net/assets/images/blog/blog-01.jpg" alt="">
+              </div>
+              <div class="news-content">
+                <p>Development</p>
+                <h4> Getting tickets to the big show</h4>
+                <div class="news-btn">
+                  <a href=""> READ MORE</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-sm-6">
+            <div class="thumb">
+              <div class="news-thumbnail">
+                <img src="	http://trydo.rainbowit.net/assets/images/blog/blog-02.jpg" alt="">
+              </div>
+              <div class="news-content">
+                <p>Management</p>
+                <h4>A big ticket gone to be an interesting </h4>
+                <div class="news-btn">
+                  <a href=""> READ MORE</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-sm-6">
+            <div class="thumb">
+              <div class="news-thumbnail">
+                <img src="	http://trydo.rainbowit.net/assets/images/blog/blog-03.jpg" alt="">
+              </div>
+              <div class="news-content">
+                <p>Design</p>
+                <h4>The Home of the Future Could Bebes</h4>
+                <div class="news-btn">
+                  <a href=""> READ MORE</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="ready-work">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 rd-work">
+            <div class="rd">
+              <p>READY TO DO THIS</p>
+              <h2>Let's get to work</h2>
+              <a href="">CONTACT US</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+  </body>
 </html>
