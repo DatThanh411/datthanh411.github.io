@@ -1,0 +1,97 @@
+.blue {
+    background-color: blue; 
+    height: 100px; 
+    width: auto; 
+    margin: 10px 0px;
+    border: 1px solid black;
+}
+
+.double {
+    height: 200px;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.f-wrap {
+    flex-wrap: wrap;
+}
+
+.j-center {
+    justify-content: center;
+}
+
+.j-between {
+    justify-content: space-between;
+}
+
+.j-end {
+    justify-content: flex-end;
+}
+
+.a-center {
+align-items: center;
+}
+
+.f-column {
+    flex-direction: column;
+}
+
+.font-b {
+    font-weight: bold;
+}
+
+.font-5 {
+    font-weight: 500;
+}
+
+.modal-header {
+    border-bottom: none;
+}
+
+.sub-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.info {
+    text-align: center;
+    height: 100%;
+}
+
+.modal-header h5 {
+    width: 100%;
+    text-align: center;
+}
+
+.modal-body-title {
+    border-bottom: var(--bs-modal-header-border-width) solid var(--bs-modal-header-border-color);
+    padding-bottom: 15px;
+}
+
+.name, .sub-tt {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.total {
+    width: 295px;
+    margin-right: 35px;
+}
+
+.total-price {
+    width: 150px;
+}
+
+.sub-total p {
+    font-size: 18px;
+}
+
+.tax {
+    font-size: 15px;
+}
+
+.btn-color {
+    background-color: #56B280;
+}
