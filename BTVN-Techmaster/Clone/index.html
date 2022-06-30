@@ -1,53 +1,78 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <title>Title</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS v5.2.0-beta1 -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"  integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
-  </head>
-  <body>
-    
+</head>
+
+<body>
+
     <nav class="navbar navbar-expand-sm navbar-light bg-light">
         <div class="container">
-          <a class="navbar-brand" href="#">
-              <img src="../../img/icon.png" alt="">Candleaf
-          </a>
-          <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId"
-              aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <a class="navbar-brand" href="#">
+                <img src="../../img/icon.png" alt="">Candleaf
+            </a>
+            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
 
-              <ul class="navbar-nav me-auto mt-2 mt-lg-0 navbar-cen">
+                <ul class="navbar-nav me-auto mt-2 mt-lg-0 navbar-cen">
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle font-b" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Discovery
+                        <a class="nav-link dropdown-toggle font-b" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Discovery
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="#">Action</a></li>
                             <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li><hr class="dropdown-divider"></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
                             <li><a class="dropdown-item" href="#">Something else here</a></li>
                         </ul>
                     </li>
-                  <li class="nav-item">
-                      <a class="nav-link font-b" href="#">About</a>
-                  </li>
-                  <li class="nav-item active">
-                      <a class="nav-link font-b" href="#">Contact us <span class="visually-hidden">(current)</span></a>
-                  </li>
-              </ul>
-              <form class="d-flex my-2 my-lg-0 ml navbar-right">
-                  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">BUY NOW</button>
-              </form>
-          </div>     
-    </div>
+                    <li class="nav-item">
+                        <a class="nav-link font-b" href="#">About</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link font-b" href="#">Contact us <span
+                                class="visually-hidden">(current)</span></a>
+                    </li>
+                </ul>
+                <form class="d-flex my-2 my-lg-0 ml navbar-right">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 nav-center j-center w-100">
+                        <li class="nav-item ">
+                            <i class="fa-solid fa-user f-21px"></i>
+                        </li>
+                        <li class="nav-item ms-md-1">
+                            <i class="fa-solid fa-cart-shopping f-21px position-relative " onclick="showModal(); hide()">
+                                <span id="numCarts"
+                                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"></span>
+                            </i>
+
+                            <!-- data-bs-toggle="modal"
+                        data-bs-target="#exampleModal" -->
+                        </li>
+                    </ul>
+                </form>
+            </div>
+        </div>
     </nav>
 
     <div class="banner">
@@ -59,7 +84,7 @@
                 <div class="banner-bg">
                     <div class="banner-title ">
                         <div class="banner-icon">
-                            🌱 
+                            🌱
                         </div>
                         <h2>The nature candle</h2>
                         <p>All handmade with natural soy wax, Candleaf is a companion for all your pleasure moments </p>
@@ -85,7 +110,7 @@
             </div>
 
             <div class="row">
-                
+
                 <div class="col-6 col-lg-3 fix">
                     <div class="item">
                         <div class="item-thumbnail t-cen">
@@ -185,10 +210,100 @@
             </div>
         </div>
     </div>
-      
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
-  </body>
+    <div class="container" style="margin-top: 30px;">
+        <!-- Button trigger modal -->
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+            style="display: none;" aria-hidden="true">
+            <div class="modal-dialog modal-xl position-relative">
+
+                <div class="spinner-border text-light position-absolute spinner" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+
+                <div class="modal-content" style="display: none;">
+
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Your cart items</h5>
+                    </div>
+                    <div class="sub-header">
+                        <a href="">Back to shopping</a>
+                    </div>
+
+                    <div class="modal-body">
+                        <div class="row modal-body-title">
+                            <div class="col-6">
+                                <div class="product font-b">Product</div>
+                            </div>
+                            <div class="col-6">
+                                <div class="row info">
+                                    <div class="col-4 font-b">Price</div>
+                                    <div class="col-4 font-b">Quantity</div>
+                                    <div class="col-4 font-b">Total</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="md-body-content">
+                            <div class="row body-product">
+                                <div class="col-6 p-body d-flex">
+                                    <div class="product-img">
+                                        <img src="../../img/image.png" alt="">
+                                    </div>
+                                    <div class="product-name d-flex f-column j-center">
+                                        <div class="name">Spiced Mint Candleaf</div>
+                                        <div class="remove">
+                                            <a href="">Remove</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-6">
+                                    <div class="row info">
+                                        <div class="col-4 detail d-flex j-center a-center font-5 singlePrice">$9.99
+                                        </div>
+                                        <div class="col-4 detail d-flex j-center a-center ">
+                                            <input type="number" name="Quantity" class="Quantity" min="1" max="99"
+                                                onclick="total()">
+                                        </div>
+                                        <div class="col-4 detail d-flex j-center a-center font-5 totalPrice">$9.99</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <div class="total d-flex f-wrap j-end">
+                            <div class="total-price d-flex j-between j-center">
+                                <h4 class="sub-tt">Sub-total</h4>
+                                <p class="font-5" id="finalPrice">$9.99</p>
+                            </div>
+                            <div class="tax">
+                                Tax and shipping cost will be calculated later
+                            </div>
+                        </div>
+
+                        <button type="button" class="btn btn-secondary btn-color"
+                            data-bs-dismiss="modal">Check-out</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+        integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+        integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
+        crossorigin="anonymous"></script>
+</body>
+
 </html>
-

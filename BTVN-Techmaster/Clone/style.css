@@ -137,3 +137,73 @@ img {
 .navbar-brand {
     color: #0fb438;
 }
+
+.modal-header {
+    border-bottom: none;
+}
+
+.sub-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.info {
+    text-align: center;
+    height: 100%;
+}
+
+.modal-header h5 {
+    width: 100%;
+    text-align: center;
+}
+
+.modal-body-title {
+    border-bottom: var(--bs-modal-header-border-width) solid var(--bs-modal-header-border-color);
+    padding-bottom: 15px;
+}
+
+.name, .sub-tt {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.total {
+    width: 295px;
+    margin-right: 35px;
+}
+
+.total-price {
+    width: 150px;
+}
+
+.sub-total p {
+    font-size: 18px;
+}
+
+.tax {
+    font-size: 14px;
+}
+
+.btn-color {
+    background-color: #56B280;
+}
+
+.f-21px {
+    font-size: 21px;
+}
+
+#numCarts {
+    font-size: 11px;
+}
+
+.spinner {
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    font-size: 24px;
+}
+
+.spinner-border {
+    --bs-spinner-width: 5rem;
+    --bs-spinner-height: 5rem;
+}
